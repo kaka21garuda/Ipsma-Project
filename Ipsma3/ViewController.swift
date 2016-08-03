@@ -10,6 +10,10 @@ import UIKit
 import CoreLocation
 import MapKit
 
+protocol HandleMapSearch {
+    func dropPinZoomIn(placeMark: MKPlacemark)
+}
+
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -22,6 +26,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     //SHOWING ALERT WHEN USER DENIED THE AUTHORIZATION
     let showAlert = UIAlertController()
+    
+    //PIN
+    var selectedPin: MKPlacemark? = nil
     
     
     override func viewDidLoad() {
@@ -56,6 +63,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         definesPresentationContext = true
         
         locationSearchTable.mapView = mapView
+        locationSearchTable.handleMapSearchDelegate = self
     }
 
 
@@ -119,20 +127,25 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+extension ViewController: HandleMapSearch {
+    func dropPinZoomIn(placeMark: MKPlacemark) {
+        //TAKE THE PIN
+        selectedPin = placeMark
+        mapView.removeAnnotations(mapView.annotations)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placeMark.coordinate
+        annotation.title = placeMark.name
+        
+        if let city = placeMark.locality,
+            let state = placeMark.administrativeArea {
+            annotation.subtitle = "\(city) \(state)"
+        }
+        
+        mapView.addAnnotation(annotation)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: placeMark.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+    }
+}
+/************************************************************************/
