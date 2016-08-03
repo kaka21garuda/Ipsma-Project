@@ -14,6 +14,8 @@
 		C6F434D11D51C126007AA603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F434CF1D51C126007AA603 /* LaunchScreen.storyboard */; };
 		C6F434DC1D51C126007AA603 /* Ipsma3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434DB1D51C126007AA603 /* Ipsma3Tests.swift */; };
 		C6F434E71D51C126007AA603 /* Ipsma3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434E61D51C126007AA603 /* Ipsma3UITests.swift */; };
+		C6F434F51D51C2F0007AA603 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F434F41D51C2F0007AA603 /* CoreLocation.framework */; };
+		C6F434F71D51C2F8007AA603 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F434F61D51C2F8007AA603 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C6F434E21D51C126007AA603 /* Ipsma3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ipsma3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F434E61D51C126007AA603 /* Ipsma3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ipsma3UITests.swift; sourceTree = "<group>"; };
 		C6F434E81D51C126007AA603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6F434F41D51C2F0007AA603 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C6F434F61D51C2F8007AA603 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F434F71D51C2F8007AA603 /* MapKit.framework in Frameworks */,
+				C6F434F51D51C2F0007AA603 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,8 @@
 		C6F434C51D51C126007AA603 /* Ipsma3 */ = {
 			isa = PBXGroup;
 			children = (
+				C6F434F41D51C2F0007AA603 /* CoreLocation.framework */,
+				C6F434F61D51C2F8007AA603 /* MapKit.framework */,
 				C6F434C61D51C126007AA603 /* AppDelegate.swift */,
 				C6F434C81D51C126007AA603 /* ViewController.swift */,
 				C6F434CA1D51C126007AA603 /* Main.storyboard */,
