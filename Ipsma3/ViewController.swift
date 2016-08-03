@@ -14,6 +14,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     @IBOutlet weak var mapView: MKMapView!
     
+    //PROPERTY FOR UISearchController
+    var resultSearchController: UISearchController? = nil
+    
     //1.. CREATE LOCATION MANAGER WHICH WILL DETECT THE USER'S CURRENT LOCATION
     let locationManager = CLLocationManager()
     
@@ -37,8 +40,26 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         //.. SETUP TEST DATA
         setupData()
+        
+        let locationSearchTable = storyboard!.instantiateViewControllerWithIdentifier("LocationSearchTable") as! LocationSearchTable
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        //THIS WILL CONFIGURE THE SEARCH BAR AND EMBEDS IT WITHIN THE NAVIGATION BAR
+        let searchBar = resultSearchController?.searchBar
+        searchBar?.sizeToFit()
+        searchBar?.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        
+        locationSearchTable.mapView = mapView
     }
-/**************************************************************************/
+
+
+    /**************************************************************************/
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         //1.. WHEN STATUS IS NOT DETERMINED

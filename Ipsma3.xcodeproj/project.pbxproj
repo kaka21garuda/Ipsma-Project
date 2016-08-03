@@ -17,6 +17,7 @@
 		C6F434F51D51C2F0007AA603 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F434F41D51C2F0007AA603 /* CoreLocation.framework */; };
 		C6F434F71D51C2F8007AA603 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F434F61D51C2F8007AA603 /* MapKit.framework */; };
 		C6F434F91D51DCE0007AA603 /* America.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C6F434F81D51DCE0007AA603 /* America.gpx */; };
+		C6F434FB1D525D36007AA603 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C6F434F41D51C2F0007AA603 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C6F434F61D51C2F8007AA603 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C6F434F81D51DCE0007AA603 /* America.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = America.gpx; sourceTree = "<group>"; };
+		C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				C6F434F61D51C2F8007AA603 /* MapKit.framework */,
 				C6F434C61D51C126007AA603 /* AppDelegate.swift */,
 				C6F434C81D51C126007AA603 /* ViewController.swift */,
+				C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */,
 				C6F434CA1D51C126007AA603 /* Main.storyboard */,
 				C6F434CD1D51C126007AA603 /* Assets.xcassets */,
 				C6F434CF1D51C126007AA603 /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 				TargetAttributes = {
 					C6F434C21D51C126007AA603 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9463ZV437K;
 					};
 					C6F434D61D51C126007AA603 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -268,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F434FB1D525D36007AA603 /* LocationSearchTable.swift in Sources */,
 				C6F434C91D51C126007AA603 /* ViewController.swift in Sources */,
 				C6F434C71D51C126007AA603 /* AppDelegate.swift in Sources */,
 			);
@@ -411,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ipsma3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Buka-Cakrawala.Ipsma3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -422,10 +430,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ipsma3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Buka-Cakrawala.Ipsma3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
