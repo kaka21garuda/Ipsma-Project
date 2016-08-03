@@ -38,7 +38,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //.. SETUP TEST DATA
         setupData()
     }
-
+/**************************************************************************/
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         //1.. WHEN STATUS IS NOT DETERMINED
@@ -57,12 +57,44 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     
     }
+/****************************************************************************/
     
     func setupData() {
-        //MONITORING REGION
+        //MONITORING REGION (IF MONITORING REGION IS SUPPORTED ON USER'S DEVICE OR NOT)
+        if CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion.self) {
+            
+            //REGION DATA
+            let title =  "City Hall"
+            let coordinate = CLLocationCoordinate2DMake(37.779398, -122.418706)
+            let regionRadius = 500.0
+            
+            //SETTING UP THE REGION
+            let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), radius: regionRadius, identifier: title)
+            locationManager.startMonitoringForRegion(region)
+            
+            //ANNOTATION
+            let cityHallAnnotation = MKPointAnnotation()
+            cityHallAnnotation.coordinate = coordinate
+            cityHallAnnotation.title = "\(title)"
+            mapView.addAnnotation(cityHallAnnotation)
+            
+            //PUTTING THE CIRCLE AROUND THE ANNOTATION
+            let circle = MKCircle(centerCoordinate: coordinate, radius: regionRadius)
+            mapView.addOverlay(circle)
+        }
         
+        else {
+            print("system can't track region")
+        }
     }
-
+    
+    // MKMapViewDelegate's METHOD IN ORDER TO DRAW THE CIRCLE
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let circleRenderer = MKCircleRenderer(overlay: overlay)
+        circleRenderer.strokeColor = UIColor.redColor()
+        circleRenderer.lineWidth = 1.0
+        return circleRenderer
+    }
 
 }
 
