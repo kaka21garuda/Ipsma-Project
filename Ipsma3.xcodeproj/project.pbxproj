@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C69565BB1D5508630018CA46 /* invite@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69565BA1D5508630018CA46 /* invite@1x.png */; };
+		C69565BD1D55086B0018CA46 /* invite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69565BC1D55086B0018CA46 /* invite@2x.png */; };
+		C69565BF1D5508720018CA46 /* invite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69565BE1D5508720018CA46 /* invite@3x.png */; };
 		C6F434C71D51C126007AA603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434C61D51C126007AA603 /* AppDelegate.swift */; };
 		C6F434C91D51C126007AA603 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434C81D51C126007AA603 /* ViewController.swift */; };
 		C6F434CC1D51C126007AA603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F434CA1D51C126007AA603 /* Main.storyboard */; };
@@ -38,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C628293D1D544D6C00CE070F /* Ipsma3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ipsma3.entitlements; sourceTree = "<group>"; };
+		C69565BA1D5508630018CA46 /* invite@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invite@1x.png"; sourceTree = "<group>"; };
+		C69565BC1D55086B0018CA46 /* invite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invite@2x.png"; sourceTree = "<group>"; };
+		C69565BE1D5508720018CA46 /* invite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invite@3x.png"; sourceTree = "<group>"; };
 		C6F434C31D51C126007AA603 /* Ipsma3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ipsma3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F434C61D51C126007AA603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F434C81D51C126007AA603 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +114,7 @@
 		C6F434C51D51C126007AA603 /* Ipsma3 */ = {
 			isa = PBXGroup;
 			children = (
+				C628293D1D544D6C00CE070F /* Ipsma3.entitlements */,
 				C6F434F81D51DCE0007AA603 /* America.gpx */,
 				C6F434F41D51C2F0007AA603 /* CoreLocation.framework */,
 				C6F434F61D51C2F8007AA603 /* MapKit.framework */,
@@ -115,6 +123,9 @@
 				C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */,
 				C6F434CA1D51C126007AA603 /* Main.storyboard */,
 				C6F434CD1D51C126007AA603 /* Assets.xcassets */,
+				C69565BA1D5508630018CA46 /* invite@1x.png */,
+				C69565BC1D55086B0018CA46 /* invite@2x.png */,
+				C69565BE1D5508720018CA46 /* invite@3x.png */,
 				C6F434CF1D51C126007AA603 /* LaunchScreen.storyboard */,
 				C6F434D21D51C126007AA603 /* Info.plist */,
 			);
@@ -207,7 +218,12 @@
 				TargetAttributes = {
 					C6F434C21D51C126007AA603 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9463ZV437K;
+						DevelopmentTeam = T9R33YRSR8;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					C6F434D61D51C126007AA603 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -245,8 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F434D11D51C126007AA603 /* LaunchScreen.storyboard in Resources */,
+				C69565BB1D5508630018CA46 /* invite@1x.png in Resources */,
 				C6F434CE1D51C126007AA603 /* Assets.xcassets in Resources */,
+				C69565BF1D5508720018CA46 /* invite@3x.png in Resources */,
 				C6F434F91D51DCE0007AA603 /* America.gpx in Resources */,
+				C69565BD1D55086B0018CA46 /* invite@2x.png in Resources */,
 				C6F434CC1D51C126007AA603 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +524,7 @@
 				C6F434ED1D51C126007AA603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6F434EE1D51C126007AA603 /* Build configuration list for PBXNativeTarget "Ipsma3Tests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +533,7 @@
 				C6F434F01D51C126007AA603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6F434F11D51C126007AA603 /* Build configuration list for PBXNativeTarget "Ipsma3UITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +542,7 @@
 				C6F434F31D51C126007AA603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
