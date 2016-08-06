@@ -33,7 +33,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Kk0-Xb-YOF" id="HfC-f6-lZI"/>
-                        <segue destination="oD1-Kr-8Gl" kind="show" identifier="" id="8YS-Pq-cz0"/>
+                        <segue destination="oD1-Kr-8Gl" kind="show" identifier="invitationSegue" id="8YS-Pq-cz0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

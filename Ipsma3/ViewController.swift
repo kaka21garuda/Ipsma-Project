@@ -124,8 +124,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         
         return pinView
+        
     }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegueWithIdentifier("invitationSegue", sender: self)
 
+    }
+    
 }
 
 extension ViewController: HandleMapSearch {
