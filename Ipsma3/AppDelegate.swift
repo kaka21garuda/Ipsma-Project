@@ -20,6 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         return true
     }
+    
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+        if let incomingURL = userActivity.webpageURL {
+            let linkHandled = FIRDynamicLinks.dynamicLinks()?.handleUniversalLink(incomingURL, completion: { (dynamiclink, error) in
+                if let dynamiclink = dynamiclink, _ = dynamiclink.url {
+                    self.handleIncomingDynamicLink(dynamiclink)
+                }// else check for errors
+            })
+            return true
+        }
+        return false
+    }
+    
+    func handleIncomingDynamicLink(dynamiclink: FIRDynamicLink) {
+        print("your incoming link parameter is \(dynamiclink.url)")
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

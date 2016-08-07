@@ -265,6 +265,9 @@
 							com.apple.Keychain = {
 								enabled = 0;
 							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
 						};
 					};
 					C6F434D61D51C126007AA603 = {
@@ -599,6 +602,7 @@
 			baseConfigurationReference = 71E3F1CAA70D5C574417441F /* Pods-Ipsma3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Ipsma3/Ipsma3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ipsma3/Info.plist;
@@ -614,6 +618,7 @@
 			baseConfigurationReference = 299FE39BDF78229D11565F29 /* Pods-Ipsma3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Ipsma3/Ipsma3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ipsma3/Info.plist;
