@@ -9,23 +9,56 @@
 import UIKit
 import Firebase
 
+
+
+
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        if configureError != nil {
+            print("we have an Error! \(configureError)")
+        }
+        GIDSignIn.sharedInstance().delegate = self
         FIRApp.configure()
         return true
     }
     
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        if let dynamiclink = FIRDynamicLinks.dynamicLinks()?.dynamicLinkFromCustomSchemeURL(url) {
+            print("I am handling a link through the openURL method")
+            self.handleIncomingDynamicLink(dynamiclink)
+            return true
+        }
+        // Handle the URL other ways if needed
+        return false
+    }
+    
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        if error != nil {
+            print("Looks like we got an Error! \(error)")
+        } else {
+            print("Wow! Our use signed in \(user)")
+        }
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
     func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
         if let incomingURL = userActivity.webpageURL {
-            let linkHandled = FIRDynamicLinks.dynamicLinks()?.handleUniversalLink(incomingURL, completion: { (dynamiclink, error) in
+            let linkHandled = FIRDynamicLinks.dynamicLinks()?.handleUniversalLink(incomingURL, completion: { [weak self](dynamiclink, error) in
+                guard let strongSelf = self else {return}
                 if let dynamiclink = dynamiclink, _ = dynamiclink.url {
-                    self.handleIncomingDynamicLink(dynamiclink)
+                    strongSelf.handleIncomingDynamicLink(dynamiclink)
                 }// else check for errors
             })
             return true
@@ -34,7 +67,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func handleIncomingDynamicLink(dynamiclink: FIRDynamicLink) {
+        if dynamiclink.matchConfidence == .Weak {
+            print("I think your incoming link parameter is\(dynamiclink.url) but I'm not sure")
+        } else {
+        
+        guard let pathComponents = dynamiclink.url?.pathComponents else {return}
+        for nextPiece in pathComponents {
+            //parsing going here
+        }
         print("your incoming link parameter is \(dynamiclink.url)")
+     }
     }
 
     func applicationWillResignActive(application: UIApplication) {
