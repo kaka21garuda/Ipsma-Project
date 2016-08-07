@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
+
 protocol HandleMapSearch {
     func dropPinZoomIn(placeMark: MKPlacemark)
 }
@@ -18,6 +19,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     
     @IBOutlet weak var mapView: MKMapView!
+    
     
     //PROPERTY FOR UISearchController
     var resultSearchController: UISearchController? = nil
@@ -129,7 +131,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         performSegueWithIdentifier("invitationSegue", sender: self)
-
+ 
     }
     
 }

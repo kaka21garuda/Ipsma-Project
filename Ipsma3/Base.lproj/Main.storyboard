@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" id="FmP-We-bSJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="mapView" destination="Kk0-Xb-YOF" id="HfC-f6-lZI"/>
+                        <outlet property="mapView" destination="Kk0-Xb-YOF" id="DUi-qa-vBP"/>
                         <segue destination="oD1-Kr-8Gl" kind="show" identifier="invitationSegue" id="8YS-Pq-cz0"/>
                     </connections>
                 </viewController>

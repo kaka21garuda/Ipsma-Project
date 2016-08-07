@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C69565BB1D5508630018CA46 /* invite@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69565BA1D5508630018CA46 /* invite@1x.png */; };
-		C69565BD1D55086B0018CA46 /* invite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69565BC1D55086B0018CA46 /* invite@2x.png */; };
-		C69565BF1D5508720018CA46 /* invite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C69565BE1D5508720018CA46 /* invite@3x.png */; };
+		5B00594AB4C99B02338751A3 /* Pods_Ipsma3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2542E8265C25DFD379EDFE3 /* Pods_Ipsma3Tests.framework */; };
+		67F16B8081C20F5C621B3CF1 /* Pods_Ipsma3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB90BC24497B6A541AA04266 /* Pods_Ipsma3UITests.framework */; };
+		756DDF0B8D555C2E662FC54B /* Pods_Ipsma3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA5C1A6462B6798D2049D64 /* Pods_Ipsma3.framework */; };
+		C66D33271D56C2C600AA922C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66D33261D56C2C600AA922C /* GoogleService-Info.plist */; };
 		C6F434C71D51C126007AA603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434C61D51C126007AA603 /* AppDelegate.swift */; };
 		C6F434C91D51C126007AA603 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434C81D51C126007AA603 /* ViewController.swift */; };
 		C6F434CC1D51C126007AA603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F434CA1D51C126007AA603 /* Main.storyboard */; };
@@ -41,10 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00ADBEF3501A5A799DEAF42C /* Pods-Ipsma3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.release.xcconfig"; sourceTree = "<group>"; };
+		10BC8B72DBCFC3CE85FFB7C4 /* Pods-Ipsma3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		299FE39BDF78229D11565F29 /* Pods-Ipsma3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3.release.xcconfig"; sourceTree = "<group>"; };
+		2EA5C1A6462B6798D2049D64 /* Pods_Ipsma3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39D9F862F6D748EDE7D04762 /* Pods-Ipsma3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		71E3F1CAA70D5C574417441F /* Pods-Ipsma3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3.debug.xcconfig"; sourceTree = "<group>"; };
+		933A662CC5D4BF346C04AAA4 /* Pods-Ipsma3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B2542E8265C25DFD379EDFE3 /* Pods_Ipsma3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C628293D1D544D6C00CE070F /* Ipsma3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ipsma3.entitlements; sourceTree = "<group>"; };
-		C69565BA1D5508630018CA46 /* invite@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invite@1x.png"; sourceTree = "<group>"; };
-		C69565BC1D55086B0018CA46 /* invite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invite@2x.png"; sourceTree = "<group>"; };
-		C69565BE1D5508720018CA46 /* invite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invite@3x.png"; sourceTree = "<group>"; };
+		C66D33261D56C2C600AA922C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6F434C31D51C126007AA603 /* Ipsma3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ipsma3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F434C61D51C126007AA603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F434C81D51C126007AA603 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +69,7 @@
 		C6F434F61D51C2F8007AA603 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C6F434F81D51DCE0007AA603 /* America.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = America.gpx; sourceTree = "<group>"; };
 		C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		DB90BC24497B6A541AA04266 /* Pods_Ipsma3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 			files = (
 				C6F434F71D51C2F8007AA603 /* MapKit.framework in Frameworks */,
 				C6F434F51D51C2F0007AA603 /* CoreLocation.framework in Frameworks */,
+				756DDF0B8D555C2E662FC54B /* Pods_Ipsma3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B00594AB4C99B02338751A3 /* Pods_Ipsma3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F16B8081C20F5C621B3CF1 /* Pods_Ipsma3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +109,8 @@
 				C6F434DA1D51C126007AA603 /* Ipsma3Tests */,
 				C6F434E51D51C126007AA603 /* Ipsma3UITests */,
 				C6F434C41D51C126007AA603 /* Products */,
+				F2ED2B40AA08D400A5F9FCCF /* Pods */,
+				F8C778CBF23C77A20A457299 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +127,7 @@
 		C6F434C51D51C126007AA603 /* Ipsma3 */ = {
 			isa = PBXGroup;
 			children = (
+				C66D33261D56C2C600AA922C /* GoogleService-Info.plist */,
 				C628293D1D544D6C00CE070F /* Ipsma3.entitlements */,
 				C6F434F81D51DCE0007AA603 /* America.gpx */,
 				C6F434F41D51C2F0007AA603 /* CoreLocation.framework */,
@@ -123,9 +137,6 @@
 				C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */,
 				C6F434CA1D51C126007AA603 /* Main.storyboard */,
 				C6F434CD1D51C126007AA603 /* Assets.xcassets */,
-				C69565BA1D5508630018CA46 /* invite@1x.png */,
-				C69565BC1D55086B0018CA46 /* invite@2x.png */,
-				C69565BE1D5508720018CA46 /* invite@3x.png */,
 				C6F434CF1D51C126007AA603 /* LaunchScreen.storyboard */,
 				C6F434D21D51C126007AA603 /* Info.plist */,
 			);
@@ -150,6 +161,29 @@
 			path = Ipsma3UITests;
 			sourceTree = "<group>";
 		};
+		F2ED2B40AA08D400A5F9FCCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71E3F1CAA70D5C574417441F /* Pods-Ipsma3.debug.xcconfig */,
+				299FE39BDF78229D11565F29 /* Pods-Ipsma3.release.xcconfig */,
+				10BC8B72DBCFC3CE85FFB7C4 /* Pods-Ipsma3Tests.debug.xcconfig */,
+				933A662CC5D4BF346C04AAA4 /* Pods-Ipsma3Tests.release.xcconfig */,
+				39D9F862F6D748EDE7D04762 /* Pods-Ipsma3UITests.debug.xcconfig */,
+				00ADBEF3501A5A799DEAF42C /* Pods-Ipsma3UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8C778CBF23C77A20A457299 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EA5C1A6462B6798D2049D64 /* Pods_Ipsma3.framework */,
+				B2542E8265C25DFD379EDFE3 /* Pods_Ipsma3Tests.framework */,
+				DB90BC24497B6A541AA04266 /* Pods_Ipsma3UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6F434EB1D51C126007AA603 /* Build configuration list for PBXNativeTarget "Ipsma3" */;
 			buildPhases = (
+				5276122412D38C2ABD95AF61 /* [CP] Check Pods Manifest.lock */,
 				C6F434BF1D51C126007AA603 /* Sources */,
 				C6F434C01D51C126007AA603 /* Frameworks */,
 				C6F434C11D51C126007AA603 /* Resources */,
+				A4F129C58902C29E8D35A668 /* [CP] Embed Pods Frameworks */,
+				8EFF979E5066B832251EAB26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6F434EE1D51C126007AA603 /* Build configuration list for PBXNativeTarget "Ipsma3Tests" */;
 			buildPhases = (
+				FC700437B4C5DEE8C9FEEE36 /* [CP] Check Pods Manifest.lock */,
 				C6F434D31D51C126007AA603 /* Sources */,
 				C6F434D41D51C126007AA603 /* Frameworks */,
 				C6F434D51D51C126007AA603 /* Resources */,
+				993B8974E00161D5426D4C34 /* [CP] Embed Pods Frameworks */,
+				79BC1597614502D70DD9747F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6F434F11D51C126007AA603 /* Build configuration list for PBXNativeTarget "Ipsma3UITests" */;
 			buildPhases = (
+				F326E525219DBB227DEF486A /* [CP] Check Pods Manifest.lock */,
 				C6F434DE1D51C126007AA603 /* Sources */,
 				C6F434DF1D51C126007AA603 /* Frameworks */,
 				C6F434E01D51C126007AA603 /* Resources */,
+				812E721FF4E8955E821EC131 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,11 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F434D11D51C126007AA603 /* LaunchScreen.storyboard in Resources */,
-				C69565BB1D5508630018CA46 /* invite@1x.png in Resources */,
 				C6F434CE1D51C126007AA603 /* Assets.xcassets in Resources */,
-				C69565BF1D5508720018CA46 /* invite@3x.png in Resources */,
 				C6F434F91D51DCE0007AA603 /* America.gpx in Resources */,
-				C69565BD1D55086B0018CA46 /* invite@2x.png in Resources */,
+				C66D33271D56C2C600AA922C /* GoogleService-Info.plist in Resources */,
 				C6F434CC1D51C126007AA603 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +325,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5276122412D38C2ABD95AF61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79BC1597614502D70DD9747F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		812E721FF4E8955E821EC131 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EFF979E5066B832251EAB26 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		993B8974E00161D5426D4C34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F129C58902C29E8D35A668 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F326E525219DBB227DEF486A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC700437B4C5DEE8C9FEEE36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6F434BF1D51C126007AA603 /* Sources */ = {
@@ -433,13 +596,14 @@
 		};
 		C6F434EC1D51C126007AA603 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E3F1CAA70D5C574417441F /* Pods-Ipsma3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ipsma3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Buka-Cakrawala.Ipsma3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cakrawala-Ipsma.Ipsma3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -447,13 +611,14 @@
 		};
 		C6F434ED1D51C126007AA603 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 299FE39BDF78229D11565F29 /* Pods-Ipsma3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ipsma3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Buka-Cakrawala.Ipsma3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cakrawala-Ipsma.Ipsma3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -461,6 +626,7 @@
 		};
 		C6F434EF1D51C126007AA603 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10BC8B72DBCFC3CE85FFB7C4 /* Pods-Ipsma3Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Ipsma3Tests/Info.plist;
@@ -473,6 +639,7 @@
 		};
 		C6F434F01D51C126007AA603 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 933A662CC5D4BF346C04AAA4 /* Pods-Ipsma3Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Ipsma3Tests/Info.plist;
@@ -485,6 +652,7 @@
 		};
 		C6F434F21D51C126007AA603 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39D9F862F6D748EDE7D04762 /* Pods-Ipsma3UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Ipsma3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -496,6 +664,7 @@
 		};
 		C6F434F31D51C126007AA603 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00ADBEF3501A5A799DEAF42C /* Pods-Ipsma3UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Ipsma3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
