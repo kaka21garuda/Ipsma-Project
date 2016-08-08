@@ -15,7 +15,7 @@ protocol HandleMapSearch {
     func dropPinZoomIn(placeMark: MKPlacemark)
 }
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, GIDSignInUIDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     
     @IBOutlet weak var mapView: MKMapView!
@@ -36,8 +36,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance().uiDelegate = self
-        
+                
         //2..   SETUP LOCATION MANAGER
         locationManager.delegate = self
         locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters

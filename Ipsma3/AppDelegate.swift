@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Google
+
 
 
 
@@ -21,37 +23,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        FIRApp.configure()
+        //initialize sign in
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
-        if configureError != nil {
-            print("we have an Error! \(configureError)")
-        }
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
         GIDSignIn.sharedInstance().delegate = self
-        FIRApp.configure()
         return true
     }
     
+    //This method should call the handleURL method of the GIDSignIn instance
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        if let dynamiclink = FIRDynamicLinks.dynamicLinks()?.dynamicLinkFromCustomSchemeURL(url) {
-            print("I am handling a link through the openURL method")
-            self.handleIncomingDynamicLink(dynamiclink)
-            return true
-        }
-        // Handle the URL other ways if needed
-        return false
+        return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as! String, annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
+    }
+    
+    //For your app to run on iOS 8 and older, also implement the deprecated application:openURL:sourceApplication:annotation: method.
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        var options: [String: AnyObject] = [UIApplicationOpenURLOptionsSourceApplicationKey: sourceApplication!, UIApplicationOpenURLOptionsAnnotationKey: annotation]
+        return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
-        if error != nil {
-            print("Looks like we got an Error! \(error)")
+        if (error == nil) {
+            // Perform any operations on signed in user here.
+            let userId = user.userID                  // For client-side use only!
+            let idToken = user.authentication.idToken // Safe to send to the server
+            let fullName = user.profile.name
+            let givenName = user.profile.givenName
+            let familyName = user.profile.familyName
+            let email = user.profile.email
+            // ...
         } else {
-            print("Wow! Our use signed in \(user)")
+            print("\(error.localizedDescription)")
         }
+        if user.userID != nil {
+            let storyboard = UIStoryboard(name: "signInView", bundle: nil)
+            let nextView = storyboard.instantiateViewControllerWithIdentifier("mapView") as! UIViewController
+            
+        
+        }
+        
     }
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: sourceApplication, annotation: annotation)
-    }
+
+    
+//    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+//        
+//        if let dynamiclink = FIRDynamicLinks.dynamicLinks()?.dynamicLinkFromCustomSchemeURL(url) {
+//            print("I am handling a link through the openURL method")
+//            self.handleIncomingDynamicLink(dynamiclink)
+//            return true
+//        }
+//        return false
+//    }
     
     func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
         if let incomingURL = userActivity.webpageURL {
@@ -60,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 if let dynamiclink = dynamiclink, _ = dynamiclink.url {
                     strongSelf.handleIncomingDynamicLink(dynamiclink)
                 }// else check for errors
-            })
+                })
             return true
         }
         return false
@@ -70,15 +95,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         if dynamiclink.matchConfidence == .Weak {
             print("I think your incoming link parameter is\(dynamiclink.url) but I'm not sure")
         } else {
-        
-        guard let pathComponents = dynamiclink.url?.pathComponents else {return}
-        for nextPiece in pathComponents {
-            //parsing going here
+            
+            guard let pathComponents = dynamiclink.url?.pathComponents else {return}
+            for nextPiece in pathComponents {
+                //parsing going here
+            }
+            print("your incoming link parameter is \(dynamiclink.url)")
         }
-        print("your incoming link parameter is \(dynamiclink.url)")
-     }
     }
 
+       
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B00594AB4C99B02338751A3 /* Pods_Ipsma3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2542E8265C25DFD379EDFE3 /* Pods_Ipsma3Tests.framework */; };
-		67F16B8081C20F5C621B3CF1 /* Pods_Ipsma3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB90BC24497B6A541AA04266 /* Pods_Ipsma3UITests.framework */; };
+		61CDBD10379CA5595380A27F /* Pods_Ipsma3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D924A14C3B36525B1D3F2FA9 /* Pods_Ipsma3UITests.framework */; };
 		756DDF0B8D555C2E662FC54B /* Pods_Ipsma3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA5C1A6462B6798D2049D64 /* Pods_Ipsma3.framework */; };
+		C62165C11D5854550036035F /* GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62165C01D5854550036035F /* GoogleSignIn.swift */; };
 		C66D33271D56C2C600AA922C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66D33261D56C2C600AA922C /* GoogleService-Info.plist */; };
 		C66D332A1D57B7F100AA922C /* IpsmaMFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C66D33291D57B7F100AA922C /* IpsmaMFile.m */; };
 		C6F434C71D51C126007AA603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434C61D51C126007AA603 /* AppDelegate.swift */; };
@@ -23,6 +23,7 @@
 		C6F434F71D51C2F8007AA603 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F434F61D51C2F8007AA603 /* MapKit.framework */; };
 		C6F434F91D51DCE0007AA603 /* America.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C6F434F81D51DCE0007AA603 /* America.gpx */; };
 		C6F434FB1D525D36007AA603 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */; };
+		E689F51932590393975A11B3 /* Pods_Ipsma3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2DFA8340E55B33408F2891 /* Pods_Ipsma3Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,14 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00ADBEF3501A5A799DEAF42C /* Pods-Ipsma3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.release.xcconfig"; sourceTree = "<group>"; };
-		10BC8B72DBCFC3CE85FFB7C4 /* Pods-Ipsma3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		299FE39BDF78229D11565F29 /* Pods-Ipsma3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3.release.xcconfig"; sourceTree = "<group>"; };
+		1823AA79B7EC4A06F1507AEE /* Pods-Ipsma3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3.release.xcconfig"; sourceTree = "<group>"; };
+		1B4AA50FC20E770B696345EA /* Pods-Ipsma3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		2EA5C1A6462B6798D2049D64 /* Pods_Ipsma3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39D9F862F6D748EDE7D04762 /* Pods-Ipsma3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		71E3F1CAA70D5C574417441F /* Pods-Ipsma3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3.debug.xcconfig"; sourceTree = "<group>"; };
-		933A662CC5D4BF346C04AAA4 /* Pods-Ipsma3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B2542E8265C25DFD379EDFE3 /* Pods_Ipsma3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE58203E6FD213F58417C9C /* Pods-Ipsma3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5BB4F898D97EDB76F79EC126 /* Pods-Ipsma3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3/Pods-Ipsma3.debug.xcconfig"; sourceTree = "<group>"; };
+		9D2DFA8340E55B33408F2891 /* Pods_Ipsma3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5444B578C9714BF4455FFF7 /* Pods-Ipsma3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C62165C01D5854550036035F /* GoogleSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignIn.swift; sourceTree = "<group>"; };
 		C628293D1D544D6C00CE070F /* Ipsma3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ipsma3.entitlements; sourceTree = "<group>"; };
 		C66D33261D56C2C600AA922C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66D33281D57B7F100AA922C /* Ipsma3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ipsma3-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -72,7 +73,8 @@
 		C6F434F61D51C2F8007AA603 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C6F434F81D51DCE0007AA603 /* America.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = America.gpx; sourceTree = "<group>"; };
 		C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
-		DB90BC24497B6A541AA04266 /* Pods_Ipsma3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D924A14C3B36525B1D3F2FA9 /* Pods_Ipsma3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDA6D3A2161A0B92FDAC3A6 /* Pods-Ipsma3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B00594AB4C99B02338751A3 /* Pods_Ipsma3Tests.framework in Frameworks */,
+				E689F51932590393975A11B3 /* Pods_Ipsma3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F16B8081C20F5C621B3CF1 /* Pods_Ipsma3UITests.framework in Frameworks */,
+				61CDBD10379CA5595380A27F /* Pods_Ipsma3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +114,8 @@
 				C6F434DA1D51C126007AA603 /* Ipsma3Tests */,
 				C6F434E51D51C126007AA603 /* Ipsma3UITests */,
 				C6F434C41D51C126007AA603 /* Products */,
-				F2ED2B40AA08D400A5F9FCCF /* Pods */,
 				F8C778CBF23C77A20A457299 /* Frameworks */,
+				E778DBBCE651BE6690E479FF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +137,7 @@
 				C6F434C61D51C126007AA603 /* AppDelegate.swift */,
 				C6F434C81D51C126007AA603 /* ViewController.swift */,
 				C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */,
+				C62165C01D5854550036035F /* GoogleSignIn.swift */,
 				C6F434CA1D51C126007AA603 /* Main.storyboard */,
 				C66D33291D57B7F100AA922C /* IpsmaMFile.m */,
 				C6F434CD1D51C126007AA603 /* Assets.xcassets */,
@@ -164,15 +167,15 @@
 			path = Ipsma3UITests;
 			sourceTree = "<group>";
 		};
-		F2ED2B40AA08D400A5F9FCCF /* Pods */ = {
+		E778DBBCE651BE6690E479FF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				71E3F1CAA70D5C574417441F /* Pods-Ipsma3.debug.xcconfig */,
-				299FE39BDF78229D11565F29 /* Pods-Ipsma3.release.xcconfig */,
-				10BC8B72DBCFC3CE85FFB7C4 /* Pods-Ipsma3Tests.debug.xcconfig */,
-				933A662CC5D4BF346C04AAA4 /* Pods-Ipsma3Tests.release.xcconfig */,
-				39D9F862F6D748EDE7D04762 /* Pods-Ipsma3UITests.debug.xcconfig */,
-				00ADBEF3501A5A799DEAF42C /* Pods-Ipsma3UITests.release.xcconfig */,
+				5BB4F898D97EDB76F79EC126 /* Pods-Ipsma3.debug.xcconfig */,
+				1823AA79B7EC4A06F1507AEE /* Pods-Ipsma3.release.xcconfig */,
+				C5444B578C9714BF4455FFF7 /* Pods-Ipsma3Tests.debug.xcconfig */,
+				4CE58203E6FD213F58417C9C /* Pods-Ipsma3Tests.release.xcconfig */,
+				EDDA6D3A2161A0B92FDAC3A6 /* Pods-Ipsma3UITests.debug.xcconfig */,
+				1B4AA50FC20E770B696345EA /* Pods-Ipsma3UITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -183,8 +186,8 @@
 				C6F434F41D51C2F0007AA603 /* CoreLocation.framework */,
 				C6F434F61D51C2F8007AA603 /* MapKit.framework */,
 				2EA5C1A6462B6798D2049D64 /* Pods_Ipsma3.framework */,
-				B2542E8265C25DFD379EDFE3 /* Pods_Ipsma3Tests.framework */,
-				DB90BC24497B6A541AA04266 /* Pods_Ipsma3UITests.framework */,
+				9D2DFA8340E55B33408F2891 /* Pods_Ipsma3Tests.framework */,
+				D924A14C3B36525B1D3F2FA9 /* Pods_Ipsma3UITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62165C11D5854550036035F /* GoogleSignIn.swift in Sources */,
 				C6F434FB1D525D36007AA603 /* LocationSearchTable.swift in Sources */,
 				C6F434C91D51C126007AA603 /* ViewController.swift in Sources */,
 				C66D332A1D57B7F100AA922C /* IpsmaMFile.m in Sources */,
@@ -605,7 +609,7 @@
 		};
 		C6F434EC1D51C126007AA603 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71E3F1CAA70D5C574417441F /* Pods-Ipsma3.debug.xcconfig */;
+			baseConfigurationReference = 5BB4F898D97EDB76F79EC126 /* Pods-Ipsma3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -628,7 +632,7 @@
 		};
 		C6F434ED1D51C126007AA603 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 299FE39BDF78229D11565F29 /* Pods-Ipsma3.release.xcconfig */;
+			baseConfigurationReference = 1823AA79B7EC4A06F1507AEE /* Pods-Ipsma3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -650,7 +654,7 @@
 		};
 		C6F434EF1D51C126007AA603 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10BC8B72DBCFC3CE85FFB7C4 /* Pods-Ipsma3Tests.debug.xcconfig */;
+			baseConfigurationReference = C5444B578C9714BF4455FFF7 /* Pods-Ipsma3Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Ipsma3Tests/Info.plist;
@@ -663,7 +667,7 @@
 		};
 		C6F434F01D51C126007AA603 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 933A662CC5D4BF346C04AAA4 /* Pods-Ipsma3Tests.release.xcconfig */;
+			baseConfigurationReference = 4CE58203E6FD213F58417C9C /* Pods-Ipsma3Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Ipsma3Tests/Info.plist;
@@ -676,7 +680,7 @@
 		};
 		C6F434F21D51C126007AA603 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39D9F862F6D748EDE7D04762 /* Pods-Ipsma3UITests.debug.xcconfig */;
+			baseConfigurationReference = EDDA6D3A2161A0B92FDAC3A6 /* Pods-Ipsma3UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Ipsma3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -688,7 +692,7 @@
 		};
 		C6F434F31D51C126007AA603 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00ADBEF3501A5A799DEAF42C /* Pods-Ipsma3UITests.release.xcconfig */;
+			baseConfigurationReference = 1B4AA50FC20E770B696345EA /* Pods-Ipsma3UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Ipsma3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
