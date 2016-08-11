@@ -10,6 +10,8 @@
 		61CDBD10379CA5595380A27F /* Pods_Ipsma3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D924A14C3B36525B1D3F2FA9 /* Pods_Ipsma3UITests.framework */; };
 		756DDF0B8D555C2E662FC54B /* Pods_Ipsma3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA5C1A6462B6798D2049D64 /* Pods_Ipsma3.framework */; };
 		C62165C11D5854550036035F /* GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62165C01D5854550036035F /* GoogleSignIn.swift */; };
+		C62165C31D590C980036035F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62165C21D590C980036035F /* UserData.swift */; };
+		C62165C71D5A4AEA0036035F /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62165C61D5A4AEA0036035F /* InvitationViewController.swift */; };
 		C66D33271D56C2C600AA922C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66D33261D56C2C600AA922C /* GoogleService-Info.plist */; };
 		C66D332A1D57B7F100AA922C /* IpsmaMFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C66D33291D57B7F100AA922C /* IpsmaMFile.m */; };
 		C6F434C71D51C126007AA603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F434C61D51C126007AA603 /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 		9D2DFA8340E55B33408F2891 /* Pods_Ipsma3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5444B578C9714BF4455FFF7 /* Pods-Ipsma3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ipsma3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C62165C01D5854550036035F /* GoogleSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignIn.swift; sourceTree = "<group>"; };
+		C62165C21D590C980036035F /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		C62165C61D5A4AEA0036035F /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvitationViewController.swift; path = ../InvitationViewController.swift; sourceTree = "<group>"; };
 		C628293D1D544D6C00CE070F /* Ipsma3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Ipsma3.entitlements; sourceTree = "<group>"; };
 		C66D33261D56C2C600AA922C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C66D33281D57B7F100AA922C /* Ipsma3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ipsma3-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -135,9 +139,11 @@
 				C628293D1D544D6C00CE070F /* Ipsma3.entitlements */,
 				C6F434F81D51DCE0007AA603 /* America.gpx */,
 				C6F434C61D51C126007AA603 /* AppDelegate.swift */,
+				C62165C21D590C980036035F /* UserData.swift */,
 				C6F434C81D51C126007AA603 /* ViewController.swift */,
 				C6F434FA1D525D36007AA603 /* LocationSearchTable.swift */,
 				C62165C01D5854550036035F /* GoogleSignIn.swift */,
+				C62165C61D5A4AEA0036035F /* InvitationViewController.swift */,
 				C6F434CA1D51C126007AA603 /* Main.storyboard */,
 				C66D33291D57B7F100AA922C /* IpsmaMFile.m */,
 				C6F434CD1D51C126007AA603 /* Assets.xcassets */,
@@ -465,6 +471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62165C71D5A4AEA0036035F /* InvitationViewController.swift in Sources */,
+				C62165C31D590C980036035F /* UserData.swift in Sources */,
 				C62165C11D5854550036035F /* GoogleSignIn.swift in Sources */,
 				C6F434FB1D525D36007AA603 /* LocationSearchTable.swift in Sources */,
 				C6F434C91D51C126007AA603 /* ViewController.swift in Sources */,

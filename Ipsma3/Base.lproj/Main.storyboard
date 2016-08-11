@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="703" y="559"/>
         </scene>
-        <!--View Controller-->
+        <!--Invitation View Controller-->
         <scene sceneID="jO8-Xz-fIO">
             <objects>
-                <viewController id="oD1-Kr-8Gl" sceneMemberID="viewController">
+                <viewController id="oD1-Kr-8Gl" customClass="InvitationViewController" customModule="Ipsma3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xla-x3-kos"/>
                         <viewControllerLayoutGuide type="bottom" id="QZE-bb-XPk"/>
@@ -70,9 +70,62 @@
                     <view key="view" contentMode="scaleToFill" id="Yru-Na-3Lt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjJ-tG-AL8">
+                                <rect key="frame" x="36" y="88" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pks-je-kjK">
+                                <rect key="frame" x="36" y="150" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pyq-jK-uYs">
+                                <rect key="frame" x="146" y="84" width="138" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-xg-m4h">
+                                <rect key="frame" x="146" y="146" width="138" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditing:" destination="oD1-Kr-8Gl" eventType="editingDidEnd" id="SXg-E2-tu3"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBl-4n-Peu">
+                                <rect key="frame" x="44" y="404" width="233" height="56"/>
+                                <state key="normal" title="Send via Text/SMS"/>
+                                <connections>
+                                    <action selector="inviteTapped:" destination="oD1-Kr-8Gl" eventType="touchUpInside" id="c3m-6A-Z15"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTw-xK-f4O">
+                                <rect key="frame" x="36" y="215" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9us-Bv-9Fu">
+                                <rect key="frame" x="146" y="212" width="138" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="timeTextFieldEditing:" destination="oD1-Kr-8Gl" eventType="editingDidEnd" id="3yo-PD-vSK"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="uYs-xg-m4h" id="UKw-RR-HvV"/>
+                        <outlet property="eventTextField" destination="pyq-jK-uYs" id="QjB-9C-oSx"/>
+                        <outlet property="timeTextField" destination="9us-Bv-9Fu" id="y2E-XS-YPi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IJ-ey-Kzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +134,7 @@
         <!--Navigation Controller-->
         <scene sceneID="R2S-Ou-MGI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6O0-ve-e5K" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6O0-ve-e5K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ha-LE-Iai">

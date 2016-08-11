@@ -16,13 +16,15 @@ import Google
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInviteDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Use Firebase library to configure APIs
         FIRApp.configure()
         //initialize sign in
         var configureError: NSError?
@@ -32,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         return true
     }
+    
+    
     
     //This method should call the handleURL method of the GIDSignIn instance
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
@@ -46,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
         if (error == nil) {
+            print("Signed in!")
+            
             // Perform any operations on signed in user here.
             let userId = user.userID                  // For client-side use only!
             let idToken = user.authentication.idToken // Safe to send to the server
@@ -54,20 +60,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let familyName = user.profile.familyName
             let email = user.profile.email
             // ...
+            
+            UserData.sharedInstance.userId = userId
+            UserData.sharedInstance.idToken = idToken
+            UserData.sharedInstance.fullName = fullName
+            UserData.sharedInstance.givenName = givenName
+            UserData.sharedInstance.familyName = familyName
+            UserData.sharedInstance.email = email
+            
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("RootNavigationController") 
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            
         } else {
             print("\(error.localizedDescription)")
         }
-        if user.userID != nil {
-            let storyboard = UIStoryboard(name: "signInView", bundle: nil)
-            let nextView = storyboard.instantiateViewControllerWithIdentifier("mapView") as! UIViewController
-            
-        
-        }
         
     }
-    
-
-    
+        
 //    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
 //        
 //        if let dynamiclink = FIRDynamicLinks.dynamicLinks()?.dynamicLinkFromCustomSchemeURL(url) {

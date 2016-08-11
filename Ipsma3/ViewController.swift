@@ -20,6 +20,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     @IBOutlet weak var mapView: MKMapView!
     
+   
+    
     
     //PROPERTY FOR UISearchController
     var resultSearchController: UISearchController? = nil
@@ -36,6 +38,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
                 
         //2..   SETUP LOCATION MANAGER
         locationManager.delegate = self
@@ -130,8 +134,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        print("Successfully perform a segue")
         performSegueWithIdentifier("invitationSegue", sender: self)
- 
     }
     
 }
@@ -146,9 +150,9 @@ extension ViewController: HandleMapSearch {
         annotation.coordinate = placeMark.coordinate
         annotation.title = placeMark.name
         
-        if let city = placeMark.locality,
-            let state = placeMark.administrativeArea {
-            annotation.subtitle = "\(city) \(state)"
+        if let streetNumber = placeMark.subThoroughfare,
+            let streetName = placeMark.thoroughfare {
+            annotation.subtitle = "\(streetNumber) \(streetName)"
         }
         
         mapView.addAnnotation(annotation)
