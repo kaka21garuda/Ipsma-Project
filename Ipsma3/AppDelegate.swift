@@ -95,7 +95,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInv
     
     func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
         if let incomingURL = userActivity.webpageURL {
-            let linkHandled = FIRDynamicLinks.dynamicLinks()?.handleUniversalLink(incomingURL, completion: { [weak self](dynamiclink, error) in
+            //let linkHandled
+            _ = FIRDynamicLinks.dynamicLinks()?.handleUniversalLink(incomingURL, completion: { [weak self](dynamiclink, error) in
                 guard let strongSelf = self else {return}
                 if let dynamiclink = dynamiclink, _ = dynamiclink.url {
                     strongSelf.handleIncomingDynamicLink(dynamiclink)

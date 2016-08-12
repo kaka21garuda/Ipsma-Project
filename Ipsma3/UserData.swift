@@ -14,8 +14,8 @@ import Google
 class UserData {
     static let sharedInstance = UserData()
     
-    var userId: String = ""                 // For client-side use only!
-    var idToken: String = "" // Safe to send to the server
+    var userId: String = ""                
+    var idToken: String = ""
     var fullName: String = ""
     var givenName: String = ""
     var familyName: String = ""

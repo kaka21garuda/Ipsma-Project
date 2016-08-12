@@ -103,7 +103,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return circleRenderer
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
         print("viewForannotation")
         if annotation is MKUserLocation {
@@ -135,7 +135,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         print("Successfully perform a segue")
-        performSegueWithIdentifier("invitationSegue", sender: self)
+        performSegueWithIdentifier("invitationSegue", sender: view)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "invitationSegue" {
+            let destinationView = segue.destinationViewController as! InvitationViewController
+            
+            let annotationView = sender as! MKAnnotationView
+            
+            if let subtitle = annotationView.annotation?.subtitle,
+                let title = annotationView.annotation?.title {
+                destinationView.streetAdress = "\(title!) \(subtitle!)"
+            }
+            
+            
+        }
     }
     
 }
@@ -152,6 +167,9 @@ extension ViewController: HandleMapSearch {
         
         if let streetNumber = placeMark.subThoroughfare,
             let streetName = placeMark.thoroughfare {
+            print("===========================")
+            print("\(streetNumber) \(streetName)")
+            print("===========================")
             annotation.subtitle = "\(streetNumber) \(streetName)"
         }
         

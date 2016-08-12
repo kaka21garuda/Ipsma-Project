@@ -11,12 +11,13 @@ import Firebase
 import FirebaseInvites
 import Google
 
+
 class InvitationViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, FIRInviteDelegate {
 
     var datePickerView: UIDatePicker! = nil
     var timePickerView: UIDatePicker! = nil
     
-    
+    var streetAdress: String!
     
     //TIME TEXT FIELD
     @IBOutlet weak var timeTextField: UITextField!
@@ -39,7 +40,7 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
             invite.setInviteDelegate(self)
             
             invite.setTitle("Ipsma Invites")
-            invite.setMessage("Please come to location for \(eventTextField.text!) \(dateTextField.text!) at \(timeTextField.text!)")
+            invite.setMessage("Come to \(streetAdress!) for \(eventTextField.text!), \(dateTextField.text!) at \(timeTextField.text!) ")
             invite.open()
         }
     }
@@ -89,7 +90,7 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
         doneButton.addTarget(self, action: #selector(InvitationViewController.doneButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         timeTextField.inputView = inputView
-        timePickerView.addTarget(self, action: #selector(InvitationViewController.handleTimePicker(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        timePickerView.addTarget(self, action: #selector(InvitationViewController.handleTimePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
         
         handleTimePicker(timePickerView)
         
@@ -97,7 +98,14 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     
     
-    
+    override func viewWillAppear(animated: Bool) {
+        print("----+++++------")
+//        if let streetAdress = streetAdress {
+//            print("| Street address: \(streetAdress!) |")
+//        }
+        print("Street Addess \(streetAdress!)")
+        print("------++++-----")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
