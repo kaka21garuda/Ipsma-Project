@@ -7,4 +7,5 @@ target 'Ipsma' do
 
   # Pods for Ipsma
   pod 'Firebase'
+  pod 'Firebase/Auth'
 end

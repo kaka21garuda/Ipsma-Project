@@ -14,6 +14,8 @@
 		C60A3BF31DDD3D1700017BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60A3BF11DDD3D1700017BEA /* LaunchScreen.storyboard */; };
 		C60A3BFE1DDD3D1700017BEA /* IpsmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A3BFD1DDD3D1700017BEA /* IpsmaTests.swift */; };
 		C60A3C091DDD3D1700017BEA /* IpsmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A3C081DDD3D1700017BEA /* IpsmaUITests.swift */; };
+		C67391CC1DDD3FAD00297BC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C67391CB1DDD3FAD00297BC5 /* GoogleService-Info.plist */; };
+		C69946011DDD692F0012BD78 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69946001DDD692F0012BD78 /* LocationSearchViewController.swift */; };
 		D11E7C65F4CBC3169AE66E02 /* Pods_Ipsma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43256ADFD5439F5728B94F37 /* Pods_Ipsma.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		C60A3C041DDD3D1700017BEA /* IpsmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IpsmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60A3C081DDD3D1700017BEA /* IpsmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpsmaUITests.swift; sourceTree = "<group>"; };
 		C60A3C0A1DDD3D1700017BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C67391CB1DDD3FAD00297BC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C69946001DDD692F0012BD78 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +129,14 @@
 		C60A3BE71DDD3D1700017BEA /* Ipsma */ = {
 			isa = PBXGroup;
 			children = (
+				C67391CB1DDD3FAD00297BC5 /* GoogleService-Info.plist */,
 				C60A3BE81DDD3D1700017BEA /* AppDelegate.swift */,
 				C60A3BEA1DDD3D1700017BEA /* ViewController.swift */,
 				C60A3BEC1DDD3D1700017BEA /* Main.storyboard */,
 				C60A3BEF1DDD3D1700017BEA /* Assets.xcassets */,
 				C60A3BF11DDD3D1700017BEA /* LaunchScreen.storyboard */,
 				C60A3BF41DDD3D1700017BEA /* Info.plist */,
+				C69946001DDD692F0012BD78 /* LocationSearchViewController.swift */,
 			);
 			path = Ipsma;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 				C60A3BF31DDD3D1700017BEA /* LaunchScreen.storyboard in Resources */,
 				C60A3BF01DDD3D1700017BEA /* Assets.xcassets in Resources */,
 				C60A3BEE1DDD3D1700017BEA /* Main.storyboard in Resources */,
+				C67391CC1DDD3FAD00297BC5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60A3BEB1DDD3D1700017BEA /* ViewController.swift in Sources */,
+				C69946011DDD692F0012BD78 /* LocationSearchViewController.swift in Sources */,
 				C60A3BE91DDD3D1700017BEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

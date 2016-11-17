@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>838065579667-9n80e0h3uda7hfl3b6mn59ig5n15r61t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.838065579667-9n80e0h3uda7hfl3b6mn59ig5n15r61t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDjjYLhR_6N-yUtfHi9Xx4ZxbYAfj8dDP4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>838065579667</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kaka.Ipsma</string>
+	<key>PROJECT_ID</key>
+	<string>ipsma-5b52b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ipsma-5b52b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:838065579667:ios:3fbeca042670d7a0</string>
+	<key>DATABASE_URL</key>
+	<string>https://ipsma-5b52b.firebaseio.com</string>
+</dict>
+</plist>
