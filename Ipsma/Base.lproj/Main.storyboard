@@ -121,8 +121,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SKX-6x-0Ot">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKX-6x-0Ot">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aLz-ll-XMn" id="X8L-p9-bbc"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,6 +136,9 @@
                             <constraint firstItem="SKX-6x-0Ot" firstAttribute="leading" secondItem="Zhv-5y-3NH" secondAttribute="leading" id="vPl-xz-AX0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="SKX-6x-0Ot" id="qNB-gH-gRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAh-nT-Eem" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
