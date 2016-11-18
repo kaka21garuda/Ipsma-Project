@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //This is where automatic login happens.
         if FIRAuth.auth()?.currentUser != nil {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = mainStoryboard.instantiateViewController(withIdentifier: "LocationSearchViewController")
+            let controller = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController")
             self.window?.rootViewController = controller
             self.window?.makeKeyAndVisible()
         } else {

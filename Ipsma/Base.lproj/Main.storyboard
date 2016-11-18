@@ -102,14 +102,58 @@
                     <connections>
                         <outlet property="emailTextField" destination="JyD-Y7-tLU" id="6vk-Gf-oN6"/>
                         <outlet property="passwordTextField" destination="gqd-JJ-9kl" id="QQ3-E9-6Ul"/>
-                        <segue destination="aLz-ll-XMn" kind="show" identifier="segueToLocationSearch" id="E5s-Hg-TPY"/>
+                        <segue destination="Jgm-m7-6nQ" kind="show" identifier="segueToLocationSearch" id="E5s-Hg-TPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
-        <!--Location Search View Controller-->
+        <!--Location Search Table Table View Controller-->
+        <scene sceneID="2tl-4C-Jnp">
+            <objects>
+                <tableViewController storyboardIdentifier="LocationSearchTableTableViewController" id="NqS-c5-54G" customClass="LocationSearchTableTableViewController" customModule="Ipsma" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aEJ-XJ-Kfa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="8zd-k5-gVt" detailTextLabel="6YH-ch-mEz" style="IBUITableViewCellStyleSubtitle" id="TlX-rN-jxj">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TlX-rN-jxj" id="w56-TE-aZa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="This is where location is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8zd-k5-gVt">
+                                            <rect key="frame" x="15" y="4" width="183" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6YH-ch-mEz">
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NqS-c5-54G" id="ow7-gJ-dIE"/>
+                            <outlet property="delegate" destination="NqS-c5-54G" id="7Re-s3-tSd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJq-a4-UBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="723"/>
+        </scene>
+        <!--hola-->
         <scene sceneID="gLb-I4-MNa">
             <objects>
                 <viewController storyboardIdentifier="LocationSearchViewController" id="aLz-ll-XMn" customClass="LocationSearchViewController" customModule="Ipsma" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKX-6x-0Ot">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <outlet property="delegate" destination="aLz-ll-XMn" id="X8L-p9-bbc"/>
                                 </connections>
@@ -130,17 +174,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="SKX-6x-0Ot" secondAttribute="trailing" id="KRa-Zb-Fyg"/>
-                            <constraint firstItem="SKX-6x-0Ot" firstAttribute="top" secondItem="Zhv-5y-3NH" secondAttribute="top" id="V75-on-hCd"/>
-                            <constraint firstItem="7Ca-5I-NSa" firstAttribute="top" secondItem="SKX-6x-0Ot" secondAttribute="bottom" id="ZMB-f2-kBI"/>
-                            <constraint firstItem="SKX-6x-0Ot" firstAttribute="leading" secondItem="Zhv-5y-3NH" secondAttribute="leading" id="vPl-xz-AX0"/>
+                            <constraint firstItem="SKX-6x-0Ot" firstAttribute="leading" secondItem="Zhv-5y-3NH" secondAttribute="leading" id="2cd-Nr-eAk"/>
+                            <constraint firstAttribute="trailing" secondItem="SKX-6x-0Ot" secondAttribute="trailing" id="6pJ-ER-3ba"/>
+                            <constraint firstItem="SKX-6x-0Ot" firstAttribute="top" secondItem="mEw-5a-7S6" secondAttribute="bottom" id="iBA-IE-FoN"/>
+                            <constraint firstItem="7Ca-5I-NSa" firstAttribute="top" secondItem="SKX-6x-0Ot" secondAttribute="bottom" id="jL2-hG-6cA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="hola" id="Rs4-dl-OGa"/>
                     <connections>
                         <outlet property="mapView" destination="SKX-6x-0Ot" id="qNB-gH-gRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAh-nT-Eem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.8" y="36.431784107946029"/>
+        </scene>
+        <!--NavigationController-->
+        <scene sceneID="pdW-tg-uh6">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" title="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Jgm-m7-6nQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sui-Ld-gaY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aLz-ll-XMn" kind="relationship" relationship="rootViewController" id="G3n-e4-iVT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQp-gz-MPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773.60000000000002" y="36.431784107946029"/>
         </scene>

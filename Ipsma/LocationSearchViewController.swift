@@ -11,17 +11,39 @@ import MapKit
 import CoreLocation
 
 class LocationSearchViewController: UIViewController {
-    let locationManager = CLLocationManager()
     
+    var resultSearchController: UISearchController? = nil
+    
+    let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //Triggers the location permission dialog.
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        
+        let locationSearchTable = storyboard?.instantiateViewController(withIdentifier: "LocationSearchTableTableViewController") as! LocationSearchTableTableViewController
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        //Create a property of searchBar
+        let searchBar = resultSearchController?.searchBar
+        searchBar?.sizeToFit()
+        searchBar?.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        //This defines wether to hide the navigation bar and search bar, after the search results are showed
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        //dimsBackgroundDuringPresentation gives a little translucent touch when the seach bar is clicked.
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        //definesPresentationContext limits the frame, so that it doesn't overlaps the whole view.
+        definesPresentationContext = true
+        
+        locationSearchTable.mapView = mapView
+        
     }
 }
 
