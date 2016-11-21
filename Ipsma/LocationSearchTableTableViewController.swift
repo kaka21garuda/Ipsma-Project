@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class LocationSearchTableTableViewController: UITableViewController, UISearchResultsUpdating {
+    var handleMapSearchDelegate:HandleMapSearch? = nil
     //This is the property where it will store the matching search results.
     var matchingItems: [MKMapItem] = []
     var mapView: MKMapView? = nil
@@ -68,6 +69,12 @@ class LocationSearchTableTableViewController: UITableViewController, UISearchRes
         cell?.textLabel?.text = selectedItem.name
         cell?.detailTextLabel?.text = parseAddress(selectedItem: selectedItem)
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = matchingItems[indexPath.row].placemark
+        handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedItem)
+        dismiss(animated: true, completion: nil)
     }
     
 }
