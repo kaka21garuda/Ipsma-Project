@@ -38,6 +38,26 @@ class LocationSearchTableTableViewController: UITableViewController, UISearchRes
         
     }
     
+    func parseAddress(selectedItem: MKPlacemark) -> String {
+        let firstSpace = (selectedItem.subThoroughfare != nil && selectedItem.thoroughfare != nil) ? " " : " "
+        let comma = (selectedItem.subThoroughfare != nil || selectedItem.thoroughfare != nil) && (selectedItem.subAdministrativeArea != nil || selectedItem.administrativeArea != nil) ? ", " : ""
+        let secondSpace = (selectedItem.subAdministrativeArea != nil && selectedItem.administrativeArea != nil) ? " " : ""
+        let addressLine = String(
+            format:"%@%@%@%@%@%@%@",
+            // street number
+            selectedItem.subThoroughfare ?? "",
+            firstSpace,
+            // street name
+            selectedItem.thoroughfare ?? "",
+            comma,
+            // city
+            selectedItem.locality ?? "",
+            secondSpace,
+            // state
+            selectedItem.administrativeArea ?? ""
+        )
+        return addressLine    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
     }
@@ -46,7 +66,7 @@ class LocationSearchTableTableViewController: UITableViewController, UISearchRes
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         let selectedItem = matchingItems[indexPath.row].placemark
         cell?.textLabel?.text = selectedItem.name
-        cell?.detailTextLabel?.text = "insert description here."
+        cell?.detailTextLabel?.text = parseAddress(selectedItem: selectedItem)
         return cell!
     }
     
