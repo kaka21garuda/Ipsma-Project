@@ -14,13 +14,15 @@ protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
 
-class LocationSearchViewController: UIViewController {
-    
+class LocationSearchViewController: UIViewController, MKMapViewDelegate {
+    //Pin
     var selectedPin : MKPlacemark? = nil
     
     var resultSearchController: UISearchController? = nil
     
     let locationManager = CLLocationManager()
+    let showAlert = UIAlertController()
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
@@ -32,9 +34,14 @@ class LocationSearchViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .followWithHeading
+        
         let locationSearchTable = storyboard?.instantiateViewController(withIdentifier: "LocationSearchTableTableViewController") as! LocationSearchTableTableViewController
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController?.searchResultsUpdater = locationSearchTable
+        
         //Create a property of searchBar
         let searchBar = resultSearchController?.searchBar
         searchBar?.sizeToFit()
@@ -51,6 +58,31 @@ class LocationSearchViewController: UIViewController {
         locationSearchTable.handleMapSearchDelegate = self
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        //When authorization status is not determined.
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else if CLLocationManager.authorizationStatus() == .denied {
+            showAlert.message = "Location services were previously denied. Please enable location services for this app in settings."
+        } else if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let circleRenderer = MKCircleRenderer(overlay: overlay)
+        circleRenderer.strokeColor = UIColor.red
+        circleRenderer.lineWidth = 1.0
+        return circleRenderer
+    }
+    
 }
 
 extension LocationSearchViewController: CLLocationManagerDelegate, HandleMapSearch {
