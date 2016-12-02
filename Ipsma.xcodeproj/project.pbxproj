@@ -17,6 +17,7 @@
 		C67391CC1DDD3FAD00297BC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C67391CB1DDD3FAD00297BC5 /* GoogleService-Info.plist */; };
 		C69946011DDD692F0012BD78 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69946001DDD692F0012BD78 /* LocationSearchViewController.swift */; };
 		C69946031DDD7F890012BD78 /* LocationSearchTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69946021DDD7F890012BD78 /* LocationSearchTableTableViewController.swift */; };
+		C6D2FCAE1DEFED7E000A7EAF /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D2FCAD1DEFED7E000A7EAF /* InvitationViewController.swift */; };
 		D11E7C65F4CBC3169AE66E02 /* Pods_Ipsma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43256ADFD5439F5728B94F37 /* Pods_Ipsma.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		C67391CB1DDD3FAD00297BC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C69946001DDD692F0012BD78 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		C69946021DDD7F890012BD78 /* LocationSearchTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableTableViewController.swift; sourceTree = "<group>"; };
+		C6D2FCAD1DEFED7E000A7EAF /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				C60A3BF41DDD3D1700017BEA /* Info.plist */,
 				C69946001DDD692F0012BD78 /* LocationSearchViewController.swift */,
 				C69946021DDD7F890012BD78 /* LocationSearchTableTableViewController.swift */,
+				C6D2FCAD1DEFED7E000A7EAF /* InvitationViewController.swift */,
 			);
 			path = Ipsma;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60A3BEB1DDD3D1700017BEA /* ViewController.swift in Sources */,
+				C6D2FCAE1DEFED7E000A7EAF /* InvitationViewController.swift in Sources */,
 				C69946031DDD7F890012BD78 /* LocationSearchTableTableViewController.swift in Sources */,
 				C69946011DDD692F0012BD78 /* LocationSearchViewController.swift in Sources */,
 				C60A3BE91DDD3D1700017BEA /* AppDelegate.swift in Sources */,
