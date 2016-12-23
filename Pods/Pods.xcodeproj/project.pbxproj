@@ -7,102 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F57B7810C567570E3EE9CE5DB9C7EAD /* Pods-Ipsma3UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 489AC95BDAA421AEF2F2EDB3C24DB3DD /* Pods-Ipsma3UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D1998E2953FBD5BAB50EB0630C80E15 /* Pods-Ipsma3Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F96FF783C049F6BE98D67D5B2E26D5B /* Pods-Ipsma3Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		676DE9F69E459B0F38A3FF6016C9CDFC /* Pods-Ipsma3UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A55DED77AC1FE2D7796248FB3306EF3 /* Pods-Ipsma3UITests-dummy.m */; };
-		81BFD4ED5A3E069E9512960158FDAF7C /* Pods-Ipsma3Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2E5006C06C736295425BB741E0E4C /* Pods-Ipsma3Tests-dummy.m */; };
-		8D0083A764413214DA2250CBC716A93B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		951B6614B1D75E1C1C8A9326780CFE46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		960BF92AFBDB6893FE6E8AD2A26D7D6B /* Pods-Ipsma3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB12E4A2CDFE74E27AB90B1CFFB8D573 /* Pods-Ipsma3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB4F9EF409DFB3BDBDA677E98B3B34E8 /* Pods-Ipsma3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CCD3E9308DB3A3AC713E82D6FCDF14 /* Pods-Ipsma3-dummy.m */; };
+		960BF92AFBDB6893FE6E8AD2A26D7D6B /* Pods-Ipsma3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB75D3B4578118DC835DEB99792DA1E /* Pods-Ipsma3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB4F9EF409DFB3BDBDA677E98B3B34E8 /* Pods-Ipsma3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E20AF43D118D2E0D878FD657FB52ED19 /* Pods-Ipsma3-dummy.m */; };
 		F22038248467C3EF48A73EB4F5DE62B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03DBAB83CAFA3DB484CE0CC30B40FE68 /* FirebaseDynamicLinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDynamicLinks.framework; path = Frameworks/FirebaseDynamicLinks.framework; sourceTree = "<group>"; };
-		0926C526F25E94496409918D372EA287 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F0B434F47AD3F5588CD0714AD2E9521 /* GGLCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLCore.framework; path = Frameworks/GGLCore.framework; sourceTree = "<group>"; };
-		160FFFBFDB9E513702141EAED3216B66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16E5321A283600ADF290A3DF819864DE /* GooglePlusUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlusUtilities.framework; path = Frameworks/GooglePlusUtilities.framework; sourceTree = "<group>"; };
-		1A0723C466387C34FDD9536CB5ED169B /* Pods-Ipsma3Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3Tests-resources.sh"; sourceTree = "<group>"; };
 		1EFECC1D7980085B50B9C18C3237423E /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		1F92CC6CB948DC145D17E0B1DE850216 /* Core-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Core-Module.h"; path = "Headers/ModuleHeaders/Core-Module.h"; sourceTree = "<group>"; };
 		21D5B920257228FDC25564D2DBAAB283 /* Analytics-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Analytics-Module.h"; path = "Headers/ModuleHeaders/Analytics-Module.h"; sourceTree = "<group>"; };
-		34998A426BA582A81EAAC4AAD94D55FF /* Pods-Ipsma3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3.debug.xcconfig"; sourceTree = "<group>"; };
+		337E6BC11B90288D8D405E9843F5E72A /* Pods-Ipsma3-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3-frameworks.sh"; sourceTree = "<group>"; };
+		3DB75D3B4578118DC835DEB99792DA1E /* Pods-Ipsma3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ipsma3-umbrella.h"; sourceTree = "<group>"; };
 		3EDA0AF86785D8E31E618CDE610B96A2 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
-		43FDE29F2CA997DFEF2F50CFFC2AFEAB /* Pods-Ipsma3-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3-frameworks.sh"; sourceTree = "<group>"; };
-		489AC95BDAA421AEF2F2EDB3C24DB3DD /* Pods-Ipsma3UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ipsma3UITests-umbrella.h"; sourceTree = "<group>"; };
-		4DE403686E86B2C4C23BE05CAE5101EA /* Pods-Ipsma3Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3Tests-frameworks.sh"; sourceTree = "<group>"; };
+		414F9D03B1D9C581A0BB0980A74277B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44393486EFA5A1C82E0A1F93A5B37895 /* Pods-Ipsma3-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ipsma3-acknowledgements.plist"; sourceTree = "<group>"; };
 		4E444D0F8A0CDB4CCF6D63DC84374D1E /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = Frameworks/GoogleAuthUtilities.framework; sourceTree = "<group>"; };
-		521A06D1A176B4A93022F13F4B88149B /* Pods-Ipsma3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3.release.xcconfig"; sourceTree = "<group>"; };
-		6201D6A31624A94D52E89F98020676DF /* Pods-Ipsma3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		67C98F4951696FDB24EF599A4BA2C56C /* Pods-Ipsma3UITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3UITests-resources.sh"; sourceTree = "<group>"; };
-		67CD05B1CDE6443E0C072E7CEB401F7F /* Pods-Ipsma3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68DC284083A8915C28A6EF0FCE64E833 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
-		6A55DED77AC1FE2D7796248FB3306EF3 /* Pods-Ipsma3UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ipsma3UITests-dummy.m"; sourceTree = "<group>"; };
-		6CC8C8885C42BC030A61C9A9E39DAFE1 /* Pods_Ipsma3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5D47394DE09917632070809C08EA4C /* SignIn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SignIn.h; path = Headers/SignIn.h; sourceTree = "<group>"; };
-		6F96FF783C049F6BE98D67D5B2E26D5B /* Pods-Ipsma3Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ipsma3Tests-umbrella.h"; sourceTree = "<group>"; };
-		73FC08EF00740F1B5CFE42984AF2431E /* Pods-Ipsma3Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ipsma3Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		797CAE00EEE1E2C9A0B4581EBB0DF186 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
 		799EAD516EC8C5E6244B3E8892D6BBC0 /* GGLSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLSignIn.framework; path = Frameworks/GGLSignIn.framework; sourceTree = "<group>"; };
 		7DC5449ED7A38049BA50BA22FB9C3B1A /* Core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Headers/Core.h; sourceTree = "<group>"; };
-		801C6F9CA3B7BE78CA29179DB624E017 /* Pods-Ipsma3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Ipsma3.modulemap"; sourceTree = "<group>"; };
+		7EECB4B2E99CA2286975F88FCA51F111 /* Pods-Ipsma3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3.release.xcconfig"; sourceTree = "<group>"; };
 		82CFDE81AD15207FADACDF2910D0A5EB /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F657C36D4790F6D6533F1DE03C47725 /* Pods-Ipsma3-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ipsma3-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A04D83B4542287B092278B89837BAB15 /* SignIn-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SignIn-Module.h"; path = "Headers/ModuleHeaders/SignIn-Module.h"; sourceTree = "<group>"; };
-		A4E7E26E6756B051E2309C7334791859 /* Pods-Ipsma3UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Ipsma3UITests.modulemap"; sourceTree = "<group>"; };
+		A4443456553B369C8A3E6BB4A30C6DDB /* Pods-Ipsma3-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ipsma3-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A74009CE24E8B125AE5BF507849019FB /* GPPACLPickerResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GPPACLPickerResources.bundle; path = Frameworks/FirebaseInvites.framework/Resources/GPPACLPickerResources.bundle; sourceTree = "<group>"; };
 		A7D65807E3CC2FCF7B108601957AD4D0 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
-		A86AAEF1044261D7B284866C3B927FC0 /* Pods-Ipsma3-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3-resources.sh"; sourceTree = "<group>"; };
 		A9BCA58D0767D00CDC5002842E57D02C /* GoogleParsingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleParsingUtilities.framework; path = Frameworks/GoogleParsingUtilities.framework; sourceTree = "<group>"; };
-		ABF841112BC34CA84D83DFED84567637 /* Pods-Ipsma3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BC528B8E8A1BA7A210526E141603208A /* FirebaseInvites.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInvites.framework; path = Frameworks/FirebaseInvites.framework; sourceTree = "<group>"; };
 		BD8AF20071F12EA0C179D212FBA7E4CE /* GoogleSignIn.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = Resources/GoogleSignIn.bundle; sourceTree = "<group>"; };
-		C43C9F2F356F0DFC28B5CACBAA465051 /* Pods-Ipsma3Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ipsma3Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C6AF665EF4FC19D938D7967CE7EB2496 /* Pods-Ipsma3UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ipsma3UITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C7294D63A47A5E411241DC9C1CA36520 /* Pods-Ipsma3-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ipsma3-acknowledgements.plist"; sourceTree = "<group>"; };
+		BF9AFEA3018D2054389DC5FBF9892387 /* Pods-Ipsma3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Ipsma3.modulemap"; sourceTree = "<group>"; };
 		C9BD5488852668CA5BA5732EEA2F90D0 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = Frameworks/GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		CD17C7C9FF76B59707B5CBC9768844DB /* Pods-Ipsma3-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3-resources.sh"; sourceTree = "<group>"; };
 		CDC401D584B6084C3DCCE5D960FA2D42 /* GINInviteResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GINInviteResources.bundle; path = Frameworks/FirebaseInvites.framework/Resources/GINInviteResources.bundle; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D1618B4AAAA589738696FF7DEB33820B /* Pods-Ipsma3Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Ipsma3Tests.modulemap"; sourceTree = "<group>"; };
-		D2768ECF1CCB4C1122168B8CCEBF31AA /* Pods_Ipsma3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA4A5ED6024807F8FD0DBAAC8AB25436 /* Pods-Ipsma3UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ipsma3UITests-frameworks.sh"; sourceTree = "<group>"; };
-		DAA2E5006C06C736295425BB741E0E4C /* Pods-Ipsma3Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ipsma3Tests-dummy.m"; sourceTree = "<group>"; };
-		DC032B8AF5A89BB704418260A195259B /* Pods-Ipsma3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3UITests.release.xcconfig"; sourceTree = "<group>"; };
-		E330D191C753713F49077762A6F2AEB7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92D90D966AD3D129EADE9FFFAD36721 /* Pods-Ipsma3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ipsma3.debug.xcconfig"; sourceTree = "<group>"; };
+		E20AF43D118D2E0D878FD657FB52ED19 /* Pods-Ipsma3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ipsma3-dummy.m"; sourceTree = "<group>"; };
 		E94CD77BE8244D2A6622C6BFA730425C /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		F641966C998E990182563B19D08D5334 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		F6FF9183067C7953E7EDE7C8BC94952A /* Pods_Ipsma3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9CCD3E9308DB3A3AC713E82D6FCDF14 /* Pods-Ipsma3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ipsma3-dummy.m"; sourceTree = "<group>"; };
-		FB12E4A2CDFE74E27AB90B1CFFB8D573 /* Pods-Ipsma3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ipsma3-umbrella.h"; sourceTree = "<group>"; };
+		F8668CB97C3CF58F01E2AF907BB791AD /* Pods_Ipsma3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ipsma3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0BA6129B204A3C98819B4EC5A23126 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		FFB5EF88E5E0B8813456FCA405F43D9D /* Pods-Ipsma3UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ipsma3UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4582272E64D86A7C52C2EB0DF5AE8010 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				951B6614B1D75E1C1C8A9326780CFE46 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		85180F5811C60015D5229A3853DD3173 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F22038248467C3EF48A73EB4F5DE62B9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8FCDEFCCEBCD2EFA30A5516D8D0740F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D0083A764413214DA2250CBC716A93B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,12 +119,10 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		29DFB255BE33C3DF164E196C9197F332 /* Targets Support Files */ = {
+		29817268EF4537C69A0073AFED6DA99A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9F266A4783ECC0C3AA5AB0E109D9031A /* Pods-Ipsma3 */,
-				4B94F3EEC0982D3243BBB4CABCCD52B5 /* Pods-Ipsma3Tests */,
-				AA80E267593E2A3DAA4C165A928B937E /* Pods-Ipsma3UITests */,
+				C5C197FCF9474158FEB6531BA95303E0 /* Pods-Ipsma3 */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -251,24 +205,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4B94F3EEC0982D3243BBB4CABCCD52B5 /* Pods-Ipsma3Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E330D191C753713F49077762A6F2AEB7 /* Info.plist */,
-				D1618B4AAAA589738696FF7DEB33820B /* Pods-Ipsma3Tests.modulemap */,
-				C43C9F2F356F0DFC28B5CACBAA465051 /* Pods-Ipsma3Tests-acknowledgements.markdown */,
-				73FC08EF00740F1B5CFE42984AF2431E /* Pods-Ipsma3Tests-acknowledgements.plist */,
-				DAA2E5006C06C736295425BB741E0E4C /* Pods-Ipsma3Tests-dummy.m */,
-				4DE403686E86B2C4C23BE05CAE5101EA /* Pods-Ipsma3Tests-frameworks.sh */,
-				1A0723C466387C34FDD9536CB5ED169B /* Pods-Ipsma3Tests-resources.sh */,
-				6F96FF783C049F6BE98D67D5B2E26D5B /* Pods-Ipsma3Tests-umbrella.h */,
-				6201D6A31624A94D52E89F98020676DF /* Pods-Ipsma3Tests.debug.xcconfig */,
-				ABF841112BC34CA84D83DFED84567637 /* Pods-Ipsma3Tests.release.xcconfig */,
-			);
-			name = "Pods-Ipsma3Tests";
-			path = "Target Support Files/Pods-Ipsma3Tests";
-			sourceTree = "<group>";
-		};
 		4DDF5E3A38EE399FB01BCC8C921A9EEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,8 +276,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				1B7554456B4C83921C0BF8ECF32E9463 /* Pods */,
-				8823689F05FDD873C77C41B559AD3863 /* Products */,
-				29DFB255BE33C3DF164E196C9197F332 /* Targets Support Files */,
+				BEF0D7527770BEEA8FC7D3AC39AFEEE9 /* Products */,
+				29817268EF4537C69A0073AFED6DA99A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -359,16 +295,6 @@
 				FF0BA6129B204A3C98819B4EC5A23126 /* GoogleInterchangeUtilities.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8823689F05FDD873C77C41B559AD3863 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6CC8C8885C42BC030A61C9A9E39DAFE1 /* Pods_Ipsma3.framework */,
-				F6FF9183067C7953E7EDE7C8BC94952A /* Pods_Ipsma3Tests.framework */,
-				D2768ECF1CCB4C1122168B8CCEBF31AA /* Pods_Ipsma3UITests.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8CBD88AFB3E521D2BD86399A14B7260E /* GoogleUtilities */ = {
@@ -393,42 +319,6 @@
 				41C72AF6E7279041E1CCA0145413F3AF /* Frameworks */,
 			);
 			path = GooglePlusUtilities;
-			sourceTree = "<group>";
-		};
-		9F266A4783ECC0C3AA5AB0E109D9031A /* Pods-Ipsma3 */ = {
-			isa = PBXGroup;
-			children = (
-				0926C526F25E94496409918D372EA287 /* Info.plist */,
-				801C6F9CA3B7BE78CA29179DB624E017 /* Pods-Ipsma3.modulemap */,
-				9F657C36D4790F6D6533F1DE03C47725 /* Pods-Ipsma3-acknowledgements.markdown */,
-				C7294D63A47A5E411241DC9C1CA36520 /* Pods-Ipsma3-acknowledgements.plist */,
-				F9CCD3E9308DB3A3AC713E82D6FCDF14 /* Pods-Ipsma3-dummy.m */,
-				43FDE29F2CA997DFEF2F50CFFC2AFEAB /* Pods-Ipsma3-frameworks.sh */,
-				A86AAEF1044261D7B284866C3B927FC0 /* Pods-Ipsma3-resources.sh */,
-				FB12E4A2CDFE74E27AB90B1CFFB8D573 /* Pods-Ipsma3-umbrella.h */,
-				34998A426BA582A81EAAC4AAD94D55FF /* Pods-Ipsma3.debug.xcconfig */,
-				521A06D1A176B4A93022F13F4B88149B /* Pods-Ipsma3.release.xcconfig */,
-			);
-			name = "Pods-Ipsma3";
-			path = "Target Support Files/Pods-Ipsma3";
-			sourceTree = "<group>";
-		};
-		AA80E267593E2A3DAA4C165A928B937E /* Pods-Ipsma3UITests */ = {
-			isa = PBXGroup;
-			children = (
-				160FFFBFDB9E513702141EAED3216B66 /* Info.plist */,
-				A4E7E26E6756B051E2309C7334791859 /* Pods-Ipsma3UITests.modulemap */,
-				FFB5EF88E5E0B8813456FCA405F43D9D /* Pods-Ipsma3UITests-acknowledgements.markdown */,
-				C6AF665EF4FC19D938D7967CE7EB2496 /* Pods-Ipsma3UITests-acknowledgements.plist */,
-				6A55DED77AC1FE2D7796248FB3306EF3 /* Pods-Ipsma3UITests-dummy.m */,
-				DA4A5ED6024807F8FD0DBAAC8AB25436 /* Pods-Ipsma3UITests-frameworks.sh */,
-				67C98F4951696FDB24EF599A4BA2C56C /* Pods-Ipsma3UITests-resources.sh */,
-				489AC95BDAA421AEF2F2EDB3C24DB3DD /* Pods-Ipsma3UITests-umbrella.h */,
-				67CD05B1CDE6443E0C072E7CEB401F7F /* Pods-Ipsma3UITests.debug.xcconfig */,
-				DC032B8AF5A89BB704418260A195259B /* Pods-Ipsma3UITests.release.xcconfig */,
-			);
-			name = "Pods-Ipsma3UITests";
-			path = "Target Support Files/Pods-Ipsma3UITests";
 			sourceTree = "<group>";
 		};
 		B8F4B9195C3A35334BD7B026C433E95E /* Resources */ = {
@@ -456,12 +346,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BEF0D7527770BEEA8FC7D3AC39AFEEE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8668CB97C3CF58F01E2AF907BB791AD /* Pods_Ipsma3.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C2A9A7CB5B936ED87E8CDFF5B24C2594 /* GoogleAppUtilities */ = {
 			isa = PBXGroup;
 			children = (
 				B96786C6420CA647AE36A4E708625289 /* Frameworks */,
 			);
 			path = GoogleAppUtilities;
+			sourceTree = "<group>";
+		};
+		C5C197FCF9474158FEB6531BA95303E0 /* Pods-Ipsma3 */ = {
+			isa = PBXGroup;
+			children = (
+				414F9D03B1D9C581A0BB0980A74277B4 /* Info.plist */,
+				BF9AFEA3018D2054389DC5FBF9892387 /* Pods-Ipsma3.modulemap */,
+				A4443456553B369C8A3E6BB4A30C6DDB /* Pods-Ipsma3-acknowledgements.markdown */,
+				44393486EFA5A1C82E0A1F93A5B37895 /* Pods-Ipsma3-acknowledgements.plist */,
+				E20AF43D118D2E0D878FD657FB52ED19 /* Pods-Ipsma3-dummy.m */,
+				337E6BC11B90288D8D405E9843F5E72A /* Pods-Ipsma3-frameworks.sh */,
+				CD17C7C9FF76B59707B5CBC9768844DB /* Pods-Ipsma3-resources.sh */,
+				3DB75D3B4578118DC835DEB99792DA1E /* Pods-Ipsma3-umbrella.h */,
+				D92D90D966AD3D129EADE9FFFAD36721 /* Pods-Ipsma3.debug.xcconfig */,
+				7EECB4B2E99CA2286975F88FCA51F111 /* Pods-Ipsma3.release.xcconfig */,
+			);
+			name = "Pods-Ipsma3";
+			path = "Target Support Files/Pods-Ipsma3";
 			sourceTree = "<group>";
 		};
 		C82695F943483A572E7385412802B1EE /* Analytics */ = {
@@ -533,42 +449,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7135A517B953AC617F4F6C96BC0DC573 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D1998E2953FBD5BAB50EB0630C80E15 /* Pods-Ipsma3Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B53BEC27E3B360A5D6EEDE64A975A402 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F57B7810C567570E3EE9CE5DB9C7EAD /* Pods-Ipsma3UITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1CAFAC0174C28823709D26FA65FCED25 /* Pods-Ipsma3Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D2BC2C2DF8BBACB2E950B9402233AB6C /* Build configuration list for PBXNativeTarget "Pods-Ipsma3Tests" */;
-			buildPhases = (
-				AF75682C6938FC65EE6B0E5FF90C0752 /* Sources */,
-				E8FCDEFCCEBCD2EFA30A5516D8D0740F /* Frameworks */,
-				7135A517B953AC617F4F6C96BC0DC573 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-Ipsma3Tests";
-			productName = "Pods-Ipsma3Tests";
-			productReference = F6FF9183067C7953E7EDE7C8BC94952A /* Pods_Ipsma3Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		D0C8981F08BD21555AC2E673A9D0131B /* Pods-Ipsma3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50D5B773FF6F0430FA7006AB6B67A3FD /* Build configuration list for PBXNativeTarget "Pods-Ipsma3" */;
@@ -583,24 +466,7 @@
 			);
 			name = "Pods-Ipsma3";
 			productName = "Pods-Ipsma3";
-			productReference = 6CC8C8885C42BC030A61C9A9E39DAFE1 /* Pods_Ipsma3.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F92C7EADDAAB44A5B77360BB8A2C1AD7 /* Pods-Ipsma3UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 222BB6E02166316E0EDAE16B2579F31C /* Build configuration list for PBXNativeTarget "Pods-Ipsma3UITests" */;
-			buildPhases = (
-				B1D1BCA86D188FD8F4A15E49C0C7922A /* Sources */,
-				4582272E64D86A7C52C2EB0DF5AE8010 /* Frameworks */,
-				B53BEC27E3B360A5D6EEDE64A975A402 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-Ipsma3UITests";
-			productName = "Pods-Ipsma3UITests";
-			productReference = D2768ECF1CCB4C1122168B8CCEBF31AA /* Pods_Ipsma3UITests.framework */;
+			productReference = F8668CB97C3CF58F01E2AF907BB791AD /* Pods_Ipsma3.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -620,13 +486,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8823689F05FDD873C77C41B559AD3863 /* Products */;
+			productRefGroup = BEF0D7527770BEEA8FC7D3AC39AFEEE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D0C8981F08BD21555AC2E673A9D0131B /* Pods-Ipsma3 */,
-				1CAFAC0174C28823709D26FA65FCED25 /* Pods-Ipsma3Tests */,
-				F92C7EADDAAB44A5B77360BB8A2C1AD7 /* Pods-Ipsma3UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -640,61 +504,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF75682C6938FC65EE6B0E5FF90C0752 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				81BFD4ED5A3E069E9512960158FDAF7C /* Pods-Ipsma3Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1D1BCA86D188FD8F4A15E49C0C7922A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				676DE9F69E459B0F38A3FF6016C9CDFC /* Pods-Ipsma3UITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3000899CAFCA60B2E745E26E69BB0D88 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABF841112BC34CA84D83DFED84567637 /* Pods-Ipsma3Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Ipsma3Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Ipsma3Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		329DC9F52F17CA641B2FAFAFB5672C29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34998A426BA582A81EAAC4AAD94D55FF /* Pods-Ipsma3.debug.xcconfig */;
+			baseConfigurationReference = D92D90D966AD3D129EADE9FFFAD36721 /* Pods-Ipsma3.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -763,39 +578,6 @@
 			};
 			name = Release;
 		};
-		51A35C04F4F9A04BDF66EF0B5F5B787C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6201D6A31624A94D52E89F98020676DF /* Pods-Ipsma3Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Ipsma3Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Ipsma3Tests/Pods-Ipsma3Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Ipsma3Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -840,7 +622,7 @@
 		};
 		71322A0C85CA39AD352C2B3A4C4CC447 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 521A06D1A176B4A93022F13F4B88149B /* Pods-Ipsma3.release.xcconfig */;
+			baseConfigurationReference = 7EECB4B2E99CA2286975F88FCA51F111 /* Pods-Ipsma3.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -871,84 +653,9 @@
 			};
 			name = Release;
 		};
-		962C67CE82422C2C959A36D973CECB75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67CD05B1CDE6443E0C072E7CEB401F7F /* Pods-Ipsma3UITests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Ipsma3UITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Ipsma3UITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9D25FB26A97672B7EBDA9445990231D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC032B8AF5A89BB704418260A195259B /* Pods-Ipsma3UITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Ipsma3UITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Ipsma3UITests/Pods-Ipsma3UITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Ipsma3UITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		222BB6E02166316E0EDAE16B2579F31C /* Build configuration list for PBXNativeTarget "Pods-Ipsma3UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				962C67CE82422C2C959A36D973CECB75 /* Debug */,
-				9D25FB26A97672B7EBDA9445990231D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -963,15 +670,6 @@
 			buildConfigurations = (
 				329DC9F52F17CA641B2FAFAFB5672C29 /* Debug */,
 				71322A0C85CA39AD352C2B3A4C4CC447 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D2BC2C2DF8BBACB2E950B9402233AB6C /* Build configuration list for PBXNativeTarget "Pods-Ipsma3Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				51A35C04F4F9A04BDF66EF0B5F5B787C /* Debug */,
-				3000899CAFCA60B2E745E26E69BB0D88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

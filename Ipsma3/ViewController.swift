@@ -12,7 +12,7 @@ import MapKit
 
 
 protocol HandleMapSearch {
-    func dropPinZoomIn(placeMark: MKPlacemark)
+    func dropPinZoomIn(_ placeMark: MKPlacemark)
 }
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
@@ -50,11 +50,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //3.. SETUP MAPVIEW
         mapView.delegate = self
         mapView.showsUserLocation = true
-        mapView.userTrackingMode = .Follow
+        mapView.userTrackingMode = .follow
         
          
         
-        let locationSearchTable = storyboard!.instantiateViewControllerWithIdentifier("LocationSearchTable") as! LocationSearchTable
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController?.searchResultsUpdater = locationSearchTable
         
@@ -74,20 +74,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
 
     /**************************************************************************/
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         //1.. WHEN STATUS IS NOT DETERMINED
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
+        if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestAlwaysAuthorization()
         }
         
         //2.. WHEN AUTHORIZATION WERE DENIED, SHOW ALERT!!!
-        else if CLLocationManager.authorizationStatus() == .Denied {
+        else if CLLocationManager.authorizationStatus() == .denied {
             showAlert.message = "Location services were previously denied. Please enable location services for this app in Settings."
         }
         
         //EVERYTHING IS SET AND READY TO UPDATE USER'S CURRENT LOCATION!!!
-        else if CLLocationManager.authorizationStatus() == .AuthorizedAlways {
+        else if CLLocationManager.authorizationStatus() == .authorizedAlways {
             locationManager.startUpdatingLocation()
         }
     
@@ -96,14 +96,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     
     // MKMapViewDelegate's METHOD IN ORDER TO DRAW THE CIRCLE
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let circleRenderer = MKCircleRenderer(overlay: overlay)
-        circleRenderer.strokeColor = UIColor.redColor()
+        circleRenderer.strokeColor = UIColor.red
         circleRenderer.lineWidth = 1.0
         return circleRenderer
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         print("viewForannotation")
         if annotation is MKUserLocation {
@@ -112,7 +112,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         
         let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
         
         if pinView == nil {
             //println("Pinview was nil")
@@ -122,7 +122,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         
         
-        let button = UIButton(type: .ContactAdd)
+        let button = UIButton(type: .contactAdd)
         
         
         
@@ -133,14 +133,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
     }
     
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         print("Successfully perform a segue")
-        performSegueWithIdentifier("invitationSegue", sender: view)
+        performSegue(withIdentifier: "invitationSegue", sender: view)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "invitationSegue" {
-            let destinationView = segue.destinationViewController as! InvitationViewController
+            let destinationView = segue.destination as! InvitationViewController
             
             let annotationView = sender as! MKAnnotationView
             
@@ -156,7 +156,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 }
 
 extension ViewController: HandleMapSearch {
-    func dropPinZoomIn(placeMark: MKPlacemark) {
+    func dropPinZoomIn(_ placeMark: MKPlacemark) {
         //TAKE THE PIN
         selectedPin = placeMark
         mapView.removeAnnotations(mapView.annotations)

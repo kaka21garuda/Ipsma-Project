@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInv
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         //Use Firebase library to configure APIs
@@ -38,17 +38,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInv
     
     
     //This method should call the handleURL method of the GIDSignIn instance
-    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as! String, annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }
     
     //For your app to run on iOS 8 and older, also implement the deprecated application:openURL:sourceApplication:annotation: method.
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        var options: [String: AnyObject] = [UIApplicationOpenURLOptionsSourceApplicationKey: sourceApplication!, UIApplicationOpenURLOptionsAnnotationKey: annotation]
-        return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: sourceApplication, annotation: annotation)
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        var options: [String: AnyObject] = [UIApplicationOpenURLOptionsKey.sourceApplication.rawValue: sourceApplication! as AnyObject, UIApplicationOpenURLOptionsKey.annotation.rawValue: annotation as AnyObject]
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if (error == nil) {
             print("Signed in!")
             
@@ -61,18 +61,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInv
             let email = user.profile.email
             // ...
             
-            UserData.sharedInstance.userId = userId
-            UserData.sharedInstance.idToken = idToken
-            UserData.sharedInstance.fullName = fullName
-            UserData.sharedInstance.givenName = givenName
-            UserData.sharedInstance.familyName = familyName
-            UserData.sharedInstance.email = email
+            UserData.sharedInstance.userId = userId!
+            UserData.sharedInstance.idToken = idToken!
+            UserData.sharedInstance.fullName = fullName!
+            UserData.sharedInstance.givenName = givenName!
+            UserData.sharedInstance.familyName = familyName!
+            UserData.sharedInstance.email = email!
             
-            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            self.window = UIWindow(frame: UIScreen.main.bounds)
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("RootNavigationController") 
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "RootNavigationController") 
             
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
@@ -93,12 +93,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInv
 //        return false
 //    }
     
-    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         if let incomingURL = userActivity.webpageURL {
             //let linkHandled
             _ = FIRDynamicLinks.dynamicLinks()?.handleUniversalLink(incomingURL, completion: { [weak self](dynamiclink, error) in
                 guard let strongSelf = self else {return}
-                if let dynamiclink = dynamiclink, _ = dynamiclink.url {
+                if let dynamiclink = dynamiclink, let _ = dynamiclink.url {
                     strongSelf.handleIncomingDynamicLink(dynamiclink)
                 }// else check for errors
                 })
@@ -107,8 +107,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInv
         return false
     }
     
-    func handleIncomingDynamicLink(dynamiclink: FIRDynamicLink) {
-        if dynamiclink.matchConfidence == .Weak {
+    func handleIncomingDynamicLink(_ dynamiclink: FIRDynamicLink) {
+        if dynamiclink.matchConfidence == .weak {
             print("I think your incoming link parameter is\(dynamiclink.url) but I'm not sure")
         } else {
             
@@ -122,25 +122,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, FIRInv
 
        
     
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 

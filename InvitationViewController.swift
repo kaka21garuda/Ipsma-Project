@@ -26,16 +26,16 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
     //DATE TEXT FIELD
     @IBOutlet weak var dateTextField: UITextField!
     
-    @IBAction func textFieldEditing(sender: UITextField) {
+    @IBAction func textFieldEditing(_ sender: UITextField) {
        
     }
     
     
-    @IBAction func timeTextFieldEditing(sender: UITextField) {
+    @IBAction func timeTextFieldEditing(_ sender: UITextField) {
     
     }
     
-    @IBAction func inviteTapped(sender: AnyObject) {
+    @IBAction func inviteTapped(_ sender: AnyObject) {
         if let invite = FIRInvites.inviteDialog() {
             invite.setInviteDelegate(self)
             
@@ -48,26 +48,26 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     func setupInputView() {
         
-        let inputView = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 240))
+        let inputView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 240))
         
         
         datePickerView = UIDatePicker(frame:
             CGRect(x: 0, y: 40, width: self.view.frame.width, height: 200))
-        datePickerView.datePickerMode = UIDatePickerMode.Date
+        datePickerView.datePickerMode = UIDatePickerMode.date
         inputView.addSubview(datePickerView) // add date picker to UIView
         
         let doneButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
-        doneButton.setTitle("Done", forState: UIControlState.Normal)
-        doneButton.setTitle("Done", forState: UIControlState.Highlighted)
-        doneButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        doneButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
+        doneButton.setTitle("Done", for: UIControlState())
+        doneButton.setTitle("Done", for: UIControlState.highlighted)
+        doneButton.setTitleColor(UIColor.black, for: UIControlState())
+        doneButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
         
         inputView.addSubview(doneButton) // add Button to UIView
         
-        doneButton.addTarget(self, action: #selector(InvitationViewController.doneButton(_:)), forControlEvents: UIControlEvents.TouchUpInside) // set button click event
+        doneButton.addTarget(self, action: #selector(InvitationViewController.doneButton(_:)), for: UIControlEvents.touchUpInside) // set button click event
         
         dateTextField.inputView = inputView
-        datePickerView.addTarget(self, action: #selector(InvitationViewController.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: #selector(InvitationViewController.handleDatePicker(_:)), for: UIControlEvents.valueChanged)
         
         handleDatePicker(datePickerView) // Set the date on start.
     }
@@ -76,21 +76,21 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
         let inputView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 240))
         
         timePickerView = UIDatePicker(frame: CGRect(x: 0, y: 40, width: self.view.frame.width, height: 200))
-        timePickerView.datePickerMode = UIDatePickerMode.Time
+        timePickerView.datePickerMode = UIDatePickerMode.time
         inputView.addSubview(timePickerView)
         
         let doneButton = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
-        doneButton.setTitle("Done", forState: UIControlState.Normal)
-        doneButton.setTitle("Done", forState: UIControlState.Highlighted)
-        doneButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        doneButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
+        doneButton.setTitle("Done", for: UIControlState())
+        doneButton.setTitle("Done", for: UIControlState.highlighted)
+        doneButton.setTitleColor(UIColor.black, for: UIControlState())
+        doneButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
         
         inputView.addSubview(doneButton) //done button in inputview
         
-        doneButton.addTarget(self, action: #selector(InvitationViewController.doneButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        doneButton.addTarget(self, action: #selector(InvitationViewController.doneButton(_:)), for: UIControlEvents.touchUpInside)
         
         timeTextField.inputView = inputView
-        timePickerView.addTarget(self, action: #selector(InvitationViewController.handleTimePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        timePickerView.addTarget(self, action: #selector(InvitationViewController.handleTimePicker(_:)), for: UIControlEvents.valueChanged)
         
         handleTimePicker(timePickerView)
         
@@ -98,7 +98,7 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         print("----+++++------")
 //        if let streetAdress = streetAdress {
 //            print("| Street address: \(streetAdress!) |")
@@ -123,31 +123,31 @@ class InvitationViewController: UIViewController, UITextFieldDelegate, UITextVie
         // Dispose of any resources that can be recreated.
     }
     
-    func handleDatePicker(sender: UIDatePicker) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        dateTextField.text = dateFormatter.stringFromDate(sender.date)
+    func handleDatePicker(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateTextField.text = dateFormatter.string(from: sender.date)
         
     }
     
-    func handleTimePicker(sender: UIDatePicker) {
-        let timeFormatter = NSDateFormatter()
-        timeFormatter.timeStyle = .ShortStyle
-        timeTextField.text = timeFormatter.stringFromDate(sender.date)
+    func handleTimePicker(_ sender: UIDatePicker) {
+        let timeFormatter = DateFormatter()
+        timeFormatter.timeStyle = .short
+        timeTextField.text = timeFormatter.string(from: sender.date)
     }
     
-    func doneButton(sender: UIButton) {
+    func doneButton(_ sender: UIButton) {
         dateTextField.resignFirstResponder() // To resign the inputView on clicking done.
         timeTextField.resignFirstResponder()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
         
-    func inviteFinishedWithInvitations(invitationIds: [AnyObject], error: NSError?) {
+    func inviteFinished(withInvitations invitationIds: [AnyObject], error: NSError?) {
         if let error = error {
             print("Failed: " + error.localizedDescription)
         } else {

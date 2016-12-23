@@ -16,7 +16,7 @@ class LocationSearchTable: UITableViewController {
     var handleMapSearchDelegate: HandleMapSearch? = nil
     
     //Placemarks have other properties like subThoroughfare and administrativeArea which correspond to street number and state.
-    func parseAddress(selectedItem:MKPlacemark) -> String {
+    func parseAddress(_ selectedItem:MKPlacemark) -> String {
         // put a space between "4" and "Melrose Place"
         let firstSpace = (selectedItem.subThoroughfare != nil && selectedItem.thoroughfare != nil) ? " " : ""
         // put a comma between street and city/state
@@ -45,14 +45,14 @@ class LocationSearchTable: UITableViewController {
 
 
 extension LocationSearchTable: UISearchResultsUpdating {
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         guard let mapView = mapView,
             let searchBarText = searchController.searchBar.text else { return }
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = searchBarText
         request.region = mapView.region
         let search = MKLocalSearch(request: request)
-        search.startWithCompletionHandler { response, _ in
+        search.start { response, _ in
             guard let response = response else {
                 return
             }
@@ -65,13 +65,13 @@ extension LocationSearchTable: UISearchResultsUpdating {
 
 
 extension LocationSearchTable {
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
-        let selectedItem = matchingItems[indexPath.row].placemark
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
         cell.textLabel?.text = selectedItem.name
         cell.detailTextLabel?.text = parseAddress(selectedItem)
         return cell
@@ -81,10 +81,10 @@ extension LocationSearchTable {
 
 //THIS CLASS EXTENSION GROUPS UITableViewDelegate METHODS TOGETHER
 extension LocationSearchTable {
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let selectedItem = matchingItems[indexPath.row].placemark
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = matchingItems[(indexPath as NSIndexPath).row].placemark
         handleMapSearchDelegate?.dropPinZoomIn(selectedItem)
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
 }

@@ -21,7 +21,7 @@ class UserData {
     var familyName: String = ""
     var email: String = ""
     
-    private init() {
+    fileprivate init() {
         
     }
     
