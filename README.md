@@ -4,6 +4,9 @@ Ipsma is an mobile iOS app that allows user to create an event and invite people
 
 Devpost: https://devpost.com/software/ipsma-invites
 
+Note:
+> The current working version is at ```swift2``` branch.
+
 ## Table of Contents
   * [App Design](#app-design)
     * [Objective](#objective)
